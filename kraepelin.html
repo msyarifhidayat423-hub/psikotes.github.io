@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kraepelin - Latihan Sikotes</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="container">
+  <div id="setup" class="card">
+    <h2>Tes Kraepelin / Pauli</h2>
+    <p>Jumlahkan dua angka yang disorot (kuning) lalu tekan <b>angka satuan</b> dari hasilnya.
+       Contoh: 7 + 8 = 15, tekan <b>5</b>. Setelah menjawab, sorotan turun satu angka.</p>
+    <label for="jumlahKolom">Jumlah kolom</label>
+    <select id="jumlahKolom">
+      <option value="3">3 kolom</option>
+      <option value="5" selected>5 kolom</option>
+      <option value="10">10 kolom</option>
+    </select>
+    <label for="detikKolom">Waktu per kolom</label>
+    <select id="detikKolom">
+      <option value="15">15 detik</option>
+      <option value="30" selected>30 detik</option>
+      <option value="60">60 detik</option>
+    </select>
+    <div class="baris"><button id="btnMulai" class="btn" type="button">Mulai</button></div>
+  </div>
+
+  <div id="tes" class="card hidden">
+    <div class="kuis-atas"><span id="infoKolom"></span><span class="timer" id="timer">00:00</span></div>
+    <div id="kolomAngka" class="kp-kolom"></div>
+    <div id="pad" class="kp-pad">
+      <button data-n="1">1</button><button data-n="2">2</button><button data-n="3">3</button><button data-n="4">4</button><button data-n="5">5</button>
+      <button data-n="6">6</button><button data-n="7">7</button><button data-n="8">8</button><button data-n="9">9</button><button data-n="0">0</button>
+    </div>
+    <p class="kecil" style="text-align:center">Bisa juga memakai keyboard angka.</p>
+    <div class="baris"><button id="btnBerhenti" class="btn bahaya" type="button">Hentikan</button></div>
+  </div>
+</main>
+<script type="module" src="js/kraepelin.js"></script>
+</body>
+</html>

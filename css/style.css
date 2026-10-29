@@ -1,0 +1,47 @@
+:root{--bg:#f4f6fb;--card:#fff;--ink:#1f2937;--muted:#6b7280;--primary:#1d4ed8;--primary-d:#1e40af;--ok:#16a34a;--bad:#dc2626;--line:#e5e7eb}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+.navbar{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;background:var(--primary);color:#fff;padding:.7rem 1.2rem}
+.navbar .brand{font-weight:700;font-size:1.1rem;margin-right:auto}
+.navbar a{color:#dbeafe;text-decoration:none;padding:.3rem .6rem;border-radius:6px}
+.navbar a.aktif,.navbar a:hover{background:rgba(255,255,255,.18);color:#fff}
+.navbar button{background:transparent;border:1px solid #bfdbfe;color:#fff;border-radius:6px;padding:.3rem .7rem;cursor:pointer}
+.container{max-width:860px;margin:1.5rem auto;padding:0 1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.2rem;margin-bottom:1rem;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+h1,h2,h3{margin-top:0}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.stat{text-align:center}.stat .angka{font-size:2rem;font-weight:700;color:var(--primary)}.stat .label{color:var(--muted);font-size:.9rem}
+label{display:block;font-weight:600;margin:.7rem 0 .3rem}
+input,select{width:100%;padding:.6rem .7rem;border:1px solid #cbd5e1;border-radius:8px;font-size:1rem;background:#fff}
+.btn{display:inline-block;background:var(--primary);color:#fff;border:0;border-radius:8px;padding:.6rem 1.1rem;font-size:1rem;cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--primary-d)}
+.btn.sekunder{background:#e5e7eb;color:var(--ink)}.btn.sekunder:hover{background:#d1d5db}
+.btn.bahaya{background:var(--bad)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.baris{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
+.pesan{padding:.7rem .9rem;border-radius:8px;margin:.8rem 0}
+.pesan.error{background:#fee2e2;color:#991b1b}.pesan.sukses{background:#dcfce7;color:#166534}.pesan.info{background:#dbeafe;color:#1e3a8a}
+.hidden{display:none!important}
+.tabs{display:flex;gap:.5rem;margin-bottom:1rem}
+.tabs button{flex:1;padding:.6rem;border:1px solid var(--line);background:#fff;border-radius:8px;cursor:pointer;font-size:1rem}
+.tabs button.aktif{background:var(--primary);color:#fff;border-color:var(--primary)}
+.kuis-atas{display:flex;justify-content:space-between;align-items:center;margin-bottom:.8rem;color:var(--muted)}
+.timer{font-weight:700;font-size:1.2rem;color:var(--ink)}.timer.habis{color:var(--bad)}
+.bar{height:8px;background:#e5e7eb;border-radius:99px;overflow:hidden;margin-bottom:1rem}.bar>div{height:100%;background:var(--primary);width:0}
+.soal-teks{font-size:1.15rem;margin:.5rem 0 1rem}
+.soal-gambar{max-width:100%;max-height:260px;display:block;margin:0 auto 1rem;border:1px solid var(--line);border-radius:8px}
+.pilihan{display:flex;flex-direction:column;gap:.6rem}
+.opsi{text-align:left;background:#fff;border:2px solid var(--line);border-radius:10px;padding:.7rem .9rem;font-size:1rem;cursor:pointer}
+.opsi:hover{border-color:#93c5fd}.opsi.dipilih{border-color:var(--primary);background:#eff6ff}
+.review{border-left:4px solid var(--line);padding:.6rem .9rem;margin:.8rem 0;background:#fafafa;border-radius:0 8px 8px 0}
+.review.benar{border-color:var(--ok)}.review.salah{border-color:var(--bad)}
+.skor-besar{font-size:3.2rem;font-weight:700;color:var(--primary);text-align:center}
+.kp-kolom{font-size:2rem;font-weight:700;text-align:center;line-height:1.3;max-height:300px;overflow:hidden;font-variant-numeric:tabular-nums}
+.kp-kolom div{padding:.1rem 0}.kp-kolom .aktif{background:#fef3c7;border-radius:8px}
+.kp-pad{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem;max-width:380px;margin:1rem auto}
+.kp-pad button{padding:.9rem 0;font-size:1.3rem;border:2px solid var(--line);background:#fff;border-radius:10px;cursor:pointer}
+.kp-pad button:active{background:#dbeafe}
+.chart-wrap{position:relative;height:300px}
+.kecil{color:var(--muted);font-size:.9rem}
+table{width:100%;border-collapse:collapse}th,td{padding:.5rem;border-bottom:1px solid var(--line);text-align:left}
+@media(max-width:520px){.skor-besar{font-size:2.5rem}.kp-kolom{font-size:1.6rem}}

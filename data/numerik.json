@@ -1,0 +1,132 @@
+[
+  {
+    "id": "n1",
+    "subkategori": "deret",
+    "soal": "2, 4, 8, 16, ... Angka berikutnya?",
+    "pilihan": [
+      "24",
+      "30",
+      "32",
+      "64"
+    ],
+    "jawaban": 2,
+    "pembahasan": "Dikali 2 setiap langkah."
+  },
+  {
+    "id": "n2",
+    "subkategori": "deret",
+    "soal": "3, 6, 9, 12, ... Angka berikutnya?",
+    "pilihan": [
+      "14",
+      "15",
+      "16",
+      "18"
+    ],
+    "jawaban": 1,
+    "pembahasan": "Ditambah 3."
+  },
+  {
+    "id": "n3",
+    "subkategori": "deret",
+    "soal": "1, 4, 9, 16, ... Angka berikutnya?",
+    "pilihan": [
+      "20",
+      "24",
+      "25",
+      "36"
+    ],
+    "jawaban": 2,
+    "pembahasan": "Bilangan kuadrat: 1², 2², 3², 4², 5² = 25."
+  },
+  {
+    "id": "n4",
+    "subkategori": "deret",
+    "soal": "5, 10, 20, 40, ... Angka berikutnya?",
+    "pilihan": [
+      "50",
+      "60",
+      "80",
+      "100"
+    ],
+    "jawaban": 2,
+    "pembahasan": "Dikali 2."
+  },
+  {
+    "id": "n5",
+    "subkategori": "deret",
+    "soal": "100, 90, 80, 70, ... Angka berikutnya?",
+    "pilihan": [
+      "50",
+      "60",
+      "65",
+      "75"
+    ],
+    "jawaban": 1,
+    "pembahasan": "Dikurangi 10."
+  },
+  {
+    "id": "n6",
+    "subkategori": "deret",
+    "soal": "2, 3, 5, 8, 13, ... Angka berikutnya?",
+    "pilihan": [
+      "18",
+      "20",
+      "21",
+      "24"
+    ],
+    "jawaban": 2,
+    "pembahasan": "Pola Fibonacci: 8 + 13 = 21."
+  },
+  {
+    "id": "n7",
+    "subkategori": "hitungan",
+    "soal": "15% dari 200 adalah ...",
+    "pilihan": [
+      "20",
+      "25",
+      "30",
+      "35"
+    ],
+    "jawaban": 2,
+    "pembahasan": "0,15 × 200 = 30."
+  },
+  {
+    "id": "n8",
+    "subkategori": "hitungan",
+    "soal": "125 + 275 = ...",
+    "pilihan": [
+      "350",
+      "400",
+      "425",
+      "450"
+    ],
+    "jawaban": 1,
+    "pembahasan": "125 + 275 = 400."
+  },
+  {
+    "id": "n9",
+    "subkategori": "hitungan",
+    "soal": "Kecepatan 60 km/jam selama 2,5 jam menempuh jarak ...",
+    "pilihan": [
+      "120 km",
+      "135 km",
+      "150 km",
+      "160 km"
+    ],
+    "jawaban": 2,
+    "pembahasan": "60 × 2,5 = 150 km."
+  },
+  {
+    "id": "n10",
+    "subkategori": "hitungan",
+    "soal": "Rata-rata dari 70, 80, dan 90 adalah ...",
+    "pilihan": [
+      "70",
+      "75",
+      "80",
+      "85"
+    ],
+    "jawaban": 2,
+    "pembahasan": "(70+80+90) / 3 = 80."
+  }
+]

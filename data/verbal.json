@@ -1,0 +1,119 @@
+[
+  {
+    "id": "v1",
+    "subkategori": "sinonim",
+    "soal": "Sinonim KONSISTEN adalah ...",
+    "pilihan": [
+      "Tetap asas",
+      "Berubah-ubah",
+      "Ragu-ragu",
+      "Cepat"
+    ],
+    "jawaban": 0,
+    "pembahasan": "Konsisten berarti tetap pada pendirian atau asas."
+  },
+  {
+    "id": "v2",
+    "subkategori": "sinonim",
+    "soal": "Sinonim MAHIR adalah ...",
+    "pilihan": [
+      "Terampil",
+      "Malas",
+      "Pemula",
+      "Lambat"
+    ],
+    "jawaban": 0,
+    "pembahasan": "Mahir berarti terampil/cakap."
+  },
+  {
+    "id": "v3",
+    "subkategori": "sinonim",
+    "soal": "Sinonim LAZIM adalah ...",
+    "pilihan": [
+      "Biasa",
+      "Aneh",
+      "Langka",
+      "Asing"
+    ],
+    "jawaban": 0,
+    "pembahasan": "Lazim berarti biasa atau umum."
+  },
+  {
+    "id": "v4",
+    "subkategori": "antonim",
+    "soal": "Antonim DISIPLIN adalah ...",
+    "pilihan": [
+      "Tertib",
+      "Patuh",
+      "Lalai",
+      "Rajin"
+    ],
+    "jawaban": 2,
+    "pembahasan": "Disiplin berlawanan dengan lalai/abai."
+  },
+  {
+    "id": "v5",
+    "subkategori": "antonim",
+    "soal": "Antonim HEMAT adalah ...",
+    "pilihan": [
+      "Irit",
+      "Boros",
+      "Cermat",
+      "Teliti"
+    ],
+    "jawaban": 1,
+    "pembahasan": "Hemat berlawanan dengan boros."
+  },
+  {
+    "id": "v6",
+    "subkategori": "antonim",
+    "soal": "Antonim TRANSPARAN adalah ...",
+    "pilihan": [
+      "Terbuka",
+      "Jernih",
+      "Tertutup",
+      "Jelas"
+    ],
+    "jawaban": 2,
+    "pembahasan": "Transparan berarti terbuka; lawannya tertutup."
+  },
+  {
+    "id": "v7",
+    "subkategori": "analogi",
+    "soal": "Dokter : Rumah Sakit = Guru : ...",
+    "pilihan": [
+      "Buku",
+      "Sekolah",
+      "Murid",
+      "Papan tulis"
+    ],
+    "jawaban": 1,
+    "pembahasan": "Dokter bekerja di rumah sakit, guru bekerja di sekolah."
+  },
+  {
+    "id": "v8",
+    "subkategori": "analogi",
+    "soal": "Panas : Dingin = Terang : ...",
+    "pilihan": [
+      "Cahaya",
+      "Lampu",
+      "Gelap",
+      "Siang"
+    ],
+    "jawaban": 2,
+    "pembahasan": "Hubungan antonim."
+  },
+  {
+    "id": "v9",
+    "subkategori": "analogi",
+    "soal": "Pisau : Memotong = Pena : ...",
+    "pilihan": [
+      "Menulis",
+      "Kertas",
+      "Tinta",
+      "Membaca"
+    ],
+    "jawaban": 0,
+    "pembahasan": "Alat dan fungsinya."
+  }
+]

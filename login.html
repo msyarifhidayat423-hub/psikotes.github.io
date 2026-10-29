@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Masuk - Latihan Sikotes</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="container" style="max-width:440px">
+  <div class="card">
+    <h1>Latihan Sikotes</h1>
+    <div class="tabs">
+      <button id="tabMasuk" class="aktif" type="button">Masuk</button>
+      <button id="tabDaftar" type="button">Daftar</button>
+    </div>
+    <div id="pesan" class="pesan hidden"></div>
+    <div id="boxNama" class="hidden">
+      <label for="nama">Nama</label>
+      <input id="nama" type="text" autocomplete="name">
+    </div>
+    <label for="email">Email</label>
+    <input id="email" type="email" autocomplete="email">
+    <label for="password">Password</label>
+    <input id="password" type="password" autocomplete="current-password">
+    <div class="baris"><button id="btnKirim" class="btn" type="button">Masuk</button></div>
+  </div>
+</main>
+<script type="module">
+  import { masuk, daftar, cekUser, pesanError } from "./js/auth.js";
+  import { tampilPesan } from "./js/ui.js";
+  const $ = id => document.getElementById(id);
+  let modeDaftar = false;
+  if (await cekUser()) location.href = "index.html";
+
+  function setMode(d) {
+    modeDaftar = d;
+    $("tabMasuk").classList.toggle("aktif", !d);
+    $("tabDaftar").classList.toggle("aktif", d);
+    $("boxNama").classList.toggle("hidden", !d);
+    $("btnKirim").textContent = d ? "Daftar" : "Masuk";
+  }
+  $("tabMasuk").onclick = () => setMode(false);
+  $("tabDaftar").onclick = () => setMode(true);
+
+  async function kirim() {
+    const email = $("email").value.trim(), pw = $("password").value;
+    if (!email || !pw) return tampilPesan($("pesan"), "Email dan password wajib diisi.", "error");
+    $("btnKirim").disabled = true;
+    try {
+      if (modeDaftar) await daftar($("nama").value.trim(), email, pw);
+      else await masuk(email, pw);
+      location.href = "index.html";
+    } catch (e) {
+      tampilPesan($("pesan"), pesanError(e), "error");
+      $("btnKirim").disabled = false;
+    }
+  }
+  $("btnKirim").onclick = kirim;
+  $("password").addEventListener("keydown", e => { if (e.key === "Enter") kirim(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "l1",
+    "subkategori": "silogisme",
+    "soal": "Semua prajurit disiplin. Budi adalah prajurit. Maka ...",
+    "pilihan": [
+      "Budi disiplin",
+      "Budi tidak disiplin",
+      "Semua disiplin adalah prajurit",
+      "Budi bukan prajurit"
+    ],
+    "jawaban": 0,
+    "pembahasan": "Budi termasuk prajurit, sehingga mengikuti sifat prajurit."
+  },
+  {
+    "id": "l2",
+    "subkategori": "implikasi",
+    "soal": "Jika hujan, maka jalan basah. Jalan tidak basah. Maka ...",
+    "pilihan": [
+      "Hujan",
+      "Tidak hujan",
+      "Mungkin hujan",
+      "Jalan kering karena panas"
+    ],
+    "jawaban": 1,
+    "pembahasan": "Kontraposisi: bukan basah → bukan hujan."
+  },
+  {
+    "id": "l3",
+    "subkategori": "urutan",
+    "soal": "A lebih tinggi dari B, B lebih tinggi dari C. Siapa yang paling pendek?",
+    "pilihan": [
+      "A",
+      "B",
+      "C",
+      "Tidak dapat ditentukan"
+    ],
+    "jawaban": 2,
+    "pembahasan": "Urutan: A > B > C."
+  },
+  {
+    "id": "l4",
+    "subkategori": "urutan",
+    "soal": "Andi lebih tua dari Budi. Citra lebih muda dari Budi. Siapa yang paling tua?",
+    "pilihan": [
+      "Andi",
+      "Budi",
+      "Citra",
+      "Tidak dapat ditentukan"
+    ],
+    "jawaban": 0,
+    "pembahasan": "Andi > Budi > Citra."
+  },
+  {
+    "id": "l5",
+    "subkategori": "silogisme",
+    "soal": "Semua kucing adalah hewan. Sebagian hewan buas. Kesimpulan yang pasti benar ...",
+    "pilihan": [
+      "Semua kucing buas",
+      "Sebagian kucing buas",
+      "Tidak ada kucing buas",
+      "Tidak dapat disimpulkan apakah kucing buas"
+    ],
+    "jawaban": 3,
+    "pembahasan": "Sebagian hewan yang buas belum tentu mencakup kucing."
+  },
+  {
+    "id": "l6",
+    "subkategori": "hari",
+    "soal": "Hari ini Rabu. Sepuluh hari lagi adalah hari ...",
+    "pilihan": [
+      "Jumat",
+      "Sabtu",
+      "Minggu",
+      "Senin"
+    ],
+    "jawaban": 1,
+    "pembahasan": "10 hari = 1 minggu + 3 hari; Rabu + 3 = Sabtu."
+  },
+  {
+    "id": "l7",
+    "subkategori": "silogisme",
+    "soal": "Semua A adalah B dan semua B adalah C. Maka ...",
+    "pilihan": [
+      "Semua C adalah A",
+      "Semua A adalah C",
+      "Sebagian C bukan B",
+      "Tidak ada A adalah C"
+    ],
+    "jawaban": 1,
+    "pembahasan": "Silogisme transitif."
+  },
+  {
+    "id": "l8",
+    "subkategori": "pola",
+    "soal": "Senin, Rabu, Jumat, ... Hari berikutnya?",
+    "pilihan": [
+      "Sabtu",
+      "Minggu",
+      "Senin",
+      "Selasa"
+    ],
+    "jawaban": 1,
+    "pembahasan": "Loncat satu hari: Jumat + 2 = Minggu."
+  }
+]

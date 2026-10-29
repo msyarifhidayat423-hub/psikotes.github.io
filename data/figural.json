@@ -1,0 +1,58 @@
+[
+  {
+    "id": "f1",
+    "subkategori": "hitung",
+    "soal": "Berapa jumlah persegi pada gambar?",
+    "pilihan": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "jawaban": 2,
+    "pembahasan": "Terdapat 5 persegi biru.",
+    "gambar": "assets/img/figural/f1.svg"
+  },
+  {
+    "id": "f2",
+    "subkategori": "hitung",
+    "soal": "Berapa jumlah segitiga pada gambar?",
+    "pilihan": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "jawaban": 1,
+    "pembahasan": "Terdapat 4 segitiga merah.",
+    "gambar": "assets/img/figural/f2.svg"
+  },
+  {
+    "id": "f3",
+    "subkategori": "hitung",
+    "soal": "Berapa jumlah lingkaran pada gambar?",
+    "pilihan": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "jawaban": 2,
+    "pembahasan": "Terdapat 6 lingkaran hijau.",
+    "gambar": "assets/img/figural/f3.svg"
+  },
+  {
+    "id": "f4",
+    "subkategori": "hitung",
+    "soal": "Berapa jumlah bangun yang berwarna oranye?",
+    "pilihan": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "jawaban": 1,
+    "pembahasan": "Terdapat 3 bangun oranye; bangun lain berwarna abu-abu.",
+    "gambar": "assets/img/figural/f4.svg"
+  }
+]

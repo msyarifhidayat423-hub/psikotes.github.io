@@ -1,0 +1,21 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /hasil/{docId} {
+      // User hanya bisa membaca hasil miliknya sendiri
+      allow read: if request.auth != null
+                  && request.auth.uid == resource.data.uid;
+
+      // User hanya bisa membuat dokumen atas namanya sendiri, dengan skor valid
+      allow create: if request.auth != null
+                    && request.auth.uid == request.resource.data.uid
+                    && request.resource.data.skor is number
+                    && request.resource.data.skor >= 0
+                    && request.resource.data.skor <= 100
+                    && request.resource.data.kategori is string;
+
+      // Tidak ada update/delete dari client
+      allow update, delete: if false;
+    }
+  }
+}

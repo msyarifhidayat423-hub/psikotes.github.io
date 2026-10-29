@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latihan - Latihan Sikotes</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="container">
+  <div id="pesan" class="pesan hidden"></div>
+
+  <div id="setup" class="card">
+    <h2>Pilih Latihan</h2>
+    <label for="pilihKategori">Kategori</label>
+    <select id="pilihKategori"></select>
+    <label for="jumlahSoal">Jumlah soal</label>
+    <select id="jumlahSoal">
+      <option value="5">5 soal</option>
+      <option value="10" selected>10 soal</option>
+      <option value="20">20 soal</option>
+    </select>
+    <label for="menitTimer">Batas waktu</label>
+    <select id="menitTimer">
+      <option value="5">5 menit</option>
+      <option value="10" selected>10 menit</option>
+      <option value="20">20 menit</option>
+      <option value="30">30 menit</option>
+    </select>
+    <p class="kecil">Jika bank soal kurang dari jumlah yang dipilih, semua soal yang tersedia dipakai.</p>
+    <div class="baris">
+      <button id="btnMulai" class="btn" type="button">Mulai</button>
+      <a class="btn sekunder" href="kraepelin.html">Tes Kraepelin</a>
+    </div>
+  </div>
+
+  <div id="kuis" class="card hidden">
+    <div class="kuis-atas"><span id="nomor"></span><span class="timer" id="timer">00:00</span></div>
+    <div class="bar"><div id="progress"></div></div>
+    <img id="gambarSoal" class="soal-gambar hidden" alt="Gambar soal">
+    <div id="teksSoal" class="soal-teks"></div>
+    <div id="pilihan" class="pilihan"></div>
+    <div class="baris">
+      <button id="btnPrev" class="btn sekunder" type="button">Sebelumnya</button>
+      <button id="btnNext" class="btn" type="button">Berikutnya</button>
+      <button id="btnSelesai" class="btn bahaya" type="button">Selesai</button>
+    </div>
+  </div>
+</main>
+<script type="module" src="js/quiz.js"></script>
+</body>
+</html>

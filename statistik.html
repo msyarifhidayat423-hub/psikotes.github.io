@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Statistik - Latihan Sikotes</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="container">
+  <div id="pesan" class="pesan hidden"></div>
+  <div class="card">
+    <h2>Statistik Nilai</h2>
+    <label for="filter">Filter</label>
+    <select id="filter"></select>
+  </div>
+  <div class="grid">
+    <div class="card stat"><div class="angka" id="jumlahSesi">-</div><div class="label">Jumlah sesi</div></div>
+    <div class="card stat"><div class="angka" id="rataSkor">-</div><div class="label">Rata-rata skor</div></div>
+    <div class="card stat"><div class="angka" id="skorTertinggi">-</div><div class="label">Skor tertinggi</div></div>
+  </div>
+  <div class="card"><h3>Rata-rata skor per kategori</h3><div class="chart-wrap"><canvas id="chartRata"></canvas></div></div>
+  <div class="card"><h3>Perkembangan skor (15 sesi terakhir)</h3><div class="chart-wrap"><canvas id="chartRiwayat"></canvas></div></div>
+  <div class="card">
+    <h3>Riwayat terbaru</h3>
+    <table><thead><tr><th>Tanggal</th><th>Kategori</th><th>Benar</th><th>Skor</th></tr></thead><tbody id="isiTabel"></tbody></table>
+  </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script type="module" src="js/stats.js"></script>
+</body>
+</html>

@@ -1,119 +1,652 @@
 [
-  {
-    "id": "v1",
-    "subkategori": "sinonim",
-    "soal": "Sinonim KONSISTEN adalah ...",
-    "pilihan": [
-      "Tetap asas",
-      "Berubah-ubah",
-      "Ragu-ragu",
-      "Cepat"
-    ],
-    "jawaban": 0,
-    "pembahasan": "Konsisten berarti tetap pada pendirian atau asas."
-  },
-  {
-    "id": "v2",
-    "subkategori": "sinonim",
-    "soal": "Sinonim MAHIR adalah ...",
-    "pilihan": [
-      "Terampil",
-      "Malas",
-      "Pemula",
-      "Lambat"
-    ],
-    "jawaban": 0,
-    "pembahasan": "Mahir berarti terampil/cakap."
-  },
-  {
-    "id": "v3",
-    "subkategori": "sinonim",
-    "soal": "Sinonim LAZIM adalah ...",
-    "pilihan": [
-      "Biasa",
-      "Aneh",
-      "Langka",
-      "Asing"
-    ],
-    "jawaban": 0,
-    "pembahasan": "Lazim berarti biasa atau umum."
-  },
-  {
-    "id": "v4",
-    "subkategori": "antonim",
-    "soal": "Antonim DISIPLIN adalah ...",
-    "pilihan": [
-      "Tertib",
-      "Patuh",
-      "Lalai",
-      "Rajin"
-    ],
-    "jawaban": 2,
-    "pembahasan": "Disiplin berlawanan dengan lalai/abai."
-  },
-  {
-    "id": "v5",
-    "subkategori": "antonim",
-    "soal": "Antonim HEMAT adalah ...",
-    "pilihan": [
-      "Irit",
-      "Boros",
-      "Cermat",
-      "Teliti"
-    ],
-    "jawaban": 1,
-    "pembahasan": "Hemat berlawanan dengan boros."
-  },
-  {
-    "id": "v6",
-    "subkategori": "antonim",
-    "soal": "Antonim TRANSPARAN adalah ...",
-    "pilihan": [
-      "Terbuka",
-      "Jernih",
-      "Tertutup",
-      "Jelas"
-    ],
-    "jawaban": 2,
-    "pembahasan": "Transparan berarti terbuka; lawannya tertutup."
-  },
-  {
-    "id": "v7",
-    "subkategori": "analogi",
-    "soal": "Dokter : Rumah Sakit = Guru : ...",
-    "pilihan": [
-      "Buku",
-      "Sekolah",
-      "Murid",
-      "Papan tulis"
-    ],
-    "jawaban": 1,
-    "pembahasan": "Dokter bekerja di rumah sakit, guru bekerja di sekolah."
-  },
-  {
-    "id": "v8",
-    "subkategori": "analogi",
-    "soal": "Panas : Dingin = Terang : ...",
-    "pilihan": [
-      "Cahaya",
-      "Lampu",
-      "Gelap",
-      "Siang"
-    ],
-    "jawaban": 2,
-    "pembahasan": "Hubungan antonim."
-  },
-  {
-    "id": "v9",
-    "subkategori": "analogi",
-    "soal": "Pisau : Memotong = Pena : ...",
-    "pilihan": [
-      "Menulis",
-      "Kertas",
-      "Tinta",
-      "Membaca"
-    ],
-    "jawaban": 0,
-    "pembahasan": "Alat dan fungsinya."
-  }
+{
+"id": "v1",
+"subkategori": "sinonim",
+"soal": "Sinonim RELATIF adalah ...",
+"pilihan": [
+"Mutlak",
+"Nisbi",
+"Pasti",
+"Statis"
+],
+"jawaban": 1,
+"pembahasan": "Relatif memiliki arti nisbi atau bergantung pada sudut pandang tertentu."
+},
+{
+"id": "v2",
+"subkategori": "sinonim",
+"soal": "Sinonim KISI-KISI adalah ...",
+"pilihan": [
+"Pola",
+"Terali",
+"Tabel",
+"Batas"
+],
+"jawaban": 1,
+"pembahasan": "Kisi-kisi secara bahasa berarti terali atau jerjak."
+},
+{
+"id": "v3",
+"subkategori": "sinonim",
+"soal": "Sinonim AGITASI adalah ...",
+"pilihan": [
+"Anjuran",
+"Hasutan",
+"Penjelasan",
+"Perjanjian"
+],
+"jawaban": 1,
+"pembahasan": "Agitasi berarti hasutan kepada masyarakat umum untuk menimbulkan pergolakan."
+},
+{
+"id": "v4",
+"subkategori": "sinonim",
+"soal": "Sinonim ANOMALI adalah ...",
+"pilihan": [
+"Kelainan",
+"Kesamaan",
+"Keteraturan",
+"Ketentuan"
+],
+"jawaban": 0,
+"pembahasan": "Anomali adalah penyimpangan atau kelainan dari kebiasaan umum."
+},
+{
+"id": "v5",
+"subkategori": "sinonim",
+"soal": "Sinonim BONAFIDE adalah ...",
+"pilihan": [
+"Dapat dipercaya",
+"Sangat mahal",
+"Tergolong besar",
+"Sederhana"
+],
+"jawaban": 0,
+"pembahasan": "Bonafide berarti jujur, dapat dipercaya, atau memiliki reputasi baik."
+},
+{
+"id": "v6",
+"subkategori": "sinonim",
+"soal": "Sinonim ITERASI adalah ...",
+"pilihan": [
+"Pengulangan",
+"Pengurangan",
+"Penggabungan",
+"Pemisahan"
+],
+"jawaban": 0,
+"pembahasan": "Iterasi berarti perulangan atau eksekusi yang berulang."
+},
+{
+"id": "v7",
+"subkategori": "sinonim",
+"soal": "Sinonim DEHIDRASI adalah ...",
+"pilihan": [
+"Kehilangan cairan",
+"Kelebihan air",
+"Penyanderaan",
+"Penyusutan sel"
+],
+"jawaban": 0,
+"pembahasan": "Dehidrasi adalah kondisi tubuh kekurangan atau kehilangan cairan."
+},
+{
+"id": "v8",
+"subkategori": "sinonim",
+"soal": "Sinonim MOBILITAS adalah ...",
+"pilihan": [
+"Pergerakan",
+"Diam",
+"Kepadatan",
+"Kenyamanan"
+],
+"jawaban": 0,
+"pembahasan": "Mobilitas berarti kesiapsiagaan untuk bergerak atau pergerakan."
+},
+{
+"id": "v9",
+"subkategori": "sinonim",
+"soal": "Sinonim KAPABEL adalah ...",
+"pilihan": [
+"Mampu",
+"Cepat",
+"Cerdas",
+"Kuat"
+],
+"jawaban": 0,
+"pembahasan": "Kapabel berarti cakap, pandai, atau mampu melakukan sesuatu."
+},
+{
+"id": "v10",
+"subkategori": "sinonim",
+"soal": "Sinonim EVAKUASI adalah ...",
+"pilihan": [
+"Pengungsian",
+"Penyelamatan",
+"Perlindungan",
+"PemberSIhan"
+],
+"jawaban": 0,
+"pembahasan": "Evakuasi adalah pemindahan penduduk atau orang dari daerah berbahaya (pengungsian)."
+},
+{
+"id": "v11",
+"subkategori": "sinonim",
+"soal": "Sinonim TANDUS adalah ...",
+"pilihan": [
+"Subur",
+"Gersang",
+"Basah",
+"Hijau"
+],
+"jawaban": 1,
+"pembahasan": "Tandus berarti tidak subur atau gersang."
+},
+{
+"id": "v12",
+"subkategori": "sinonim",
+"soal": "Sinonim INSINUASI adalah ...",
+"pilihan": [
+"Sindiran",
+"Pujian",
+"Tuduhan",
+"Ancaman"
+],
+"jawaban": 0,
+"pembahasan": "Insinuasi adalah sindiran atau tuduhan terselubung."
+},
+{
+"id": "v13",
+"subkategori": "sinonim",
+"soal": "Sinonim IMPLIKASI adalah ...",
+"pilihan": [
+"Dampak",
+"Penyebab",
+"Tujuan",
+"Awal"
+],
+"jawaban": 0,
+"pembahasan": "Implikasi berarti keterlibatan, akibat, atau dampak langsung."
+},
+{
+"id": "v14",
+"subkategori": "sinonim",
+"soal": "Sinonim REKOMENDASI adalah ...",
+"pilihan": [
+"Saran",
+"Perintah",
+"Penolakan",
+"Kritikan"
+],
+"jawaban": 0,
+"pembahasan": "Rekomendasi adalah anjuran atau saran pendukung."
+},
+{
+"id": "v15",
+"subkategori": "sinonim",
+"soal": "Sinonim VIRTUAL adalah ...",
+"pilihan": [
+"Nyata",
+"Maya",
+"Pasti",
+"Langsung"
+],
+"jawaban": 1,
+"pembahasan": "Virtual berarti simulasi secara komputerisasi atau maya."
+},
+{
+"id": "v16",
+"subkategori": "sinonim",
+"soal": "Sinonim DESENTRALISASI adalah ...",
+"pilihan": [
+"Pemusatan",
+"Otonomi",
+"Penyatuan",
+"Penggabungan"
+],
+"jawaban": 1,
+"pembahasan": "Desentralisasi berarti penyerahan wewenang pemerintahan kepada daerah (otonomi)."
+},
+{
+"id": "v17",
+"subkategori": "sinonim",
+"soal": "Sinonim KONTRIBUSI adalah ...",
+"pilihan": [
+"Sumbangan",
+"Permintaan",
+"Pengurangan",
+"Ganti rugi"
+],
+"jawaban": 0,
+"pembahasan": "Kontribusi adalah keikutsertaan atau sumbangan peran/materi."
+},
+{
+"id": "v18",
+"subkategori": "antonim",
+"soal": "Antonim NOMADEN adalah ...",
+"pilihan": [
+"Menetap",
+"Berkelana",
+"Pindah",
+"Acak"
+],
+"jawaban": 0,
+"pembahasan": "Nomaden artinya berpindah-pindah, lawan katanya adalah menetap."
+},
+{
+"id": "v19",
+"subkategori": "antonim",
+"soal": "Antonim PROSPEKTIF adalah ...",
+"pilihan": [
+"Cerah",
+"Suram",
+"Menjanjikan",
+"Maju"
+],
+"jawaban": 1,
+"pembahasan": "Prospektif berarti memiliki prospek/harapan cerah, lawannya adalah suram."
+},
+{
+"id": "v20",
+"subkategori": "antonim",
+"soal": "Antonim HETEROGEN adalah ...",
+"pilihan": [
+"Homogen",
+"Bervariasi",
+"Campuran",
+"Berbeda"
+],
+"jawaban": 0,
+"pembahasan": "Heterogen beranekaragam, lawan katanya homogen (sejenis)."
+},
+{
+"id": "v21",
+"subkategori": "antonim",
+"soal": "Antonim ABSTRAK adalah ...",
+"pilihan": [
+"Kabur",
+"Konkret",
+"Maya",
+"Sulit"
+],
+"jawaban": 1,
+"pembahasan": "Abstrak tidak berwujud nyata, berlawanan dengan konkret."
+},
+{
+"id": "v22",
+"subkategori": "antonim",
+"soal": "Antonim KONTRAKSI adalah ...",
+"pilihan": [
+"Penyusutan",
+"Ekspansi",
+"Pengecilan",
+"Pengurangan"
+],
+"jawaban": 1,
+"pembahasan": "Kontraksi adalah pengetatan/penguncupan, berlawanan dengan ekspansi (perluasan)."
+},
+{
+"id": "v23",
+"subkategori": "antonim",
+"soal": "Antonim EPILOG adalah ...",
+"pilihan": [
+"Monolog",
+"Prolog",
+"Dialog",
+"Katalog"
+],
+"jawaban": 1,
+"pembahasan": "Epilog adalah bagian penutup karya sastra, lawannya prolog (bagian pengantar/pembuka)."
+},
+{
+"id": "v24",
+"subkategori": "antonim",
+"soal": "Antonim PASIF adalah ...",
+"pilihan": [
+"Aktif",
+"Diam",
+"Tenang",
+"Lembab"
+],
+"jawaban": 0,
+"pembahasan": "Pasif artinya bersikap menerima saja, lawannya giat/aktif."
+},
+{
+"id": "v25",
+"subkategori": "antonim",
+"soal": "Antonim MAYOR adalah ...",
+"pilihan": [
+"Minor",
+"Besar",
+"Utama",
+"Tinggi"
+],
+"jawaban": 0,
+"pembahasan": "Mayor berarti kelompok/bagian besar, lawannya minor."
+},
+{
+"id": "v26",
+"subkategori": "antonim",
+"soal": "Antonim SEKULER adalah ...",
+"pilihan": [
+"Duniawi",
+"Keagamaan",
+"Bebas",
+"Umum"
+],
+"jawaban": 1,
+"pembahasan": "Sekuler bersifat keduniawian (bebas dari norma agama), lawannya adalah keagamaan."
+},
+{
+"id": "v27",
+"subkategori": "antonim",
+"soal": "Antonim DEDUKSI adalah ...",
+"pilihan": [
+"Induksi",
+"Reduksi",
+"Koreksi",
+"Proyeksi"
+],
+"jawaban": 0,
+"pembahasan": "Deduksi adalah penarikan kesimpulan dari umum ke khusus, lawannya induksi (khusus ke umum)."
+},
+{
+"id": "v28",
+"subkategori": "antonim",
+"soal": "Antonim OPTIMIS adalah ...",
+"pilihan": [
+"Yakin",
+"Pesimis",
+"Ragu",
+"Takut"
+],
+"jawaban": 1,
+"pembahasan": "Optimis bersikap penuh harapan, lawannya pesimis."
+},
+{
+"id": "v29",
+"subkategori": "antonim",
+"soal": "Antonim SKEPTIS adalah ...",
+"pilihan": [
+"Ragu",
+"Yakin",
+"Curiga",
+"Apatis"
+],
+"jawaban": 1,
+"pembahasan": "Skeptis bermakna ragu-ragu/kurang percaya, lawan katanya adalah yakin."
+},
+{
+"id": "v30",
+"subkategori": "antonim",
+"soal": "Antonim KHAS adalah ...",
+"pilihan": [
+"Istimewa",
+"Umum",
+"Unik",
+"Khusus"
+],
+"jawaban": 1,
+"pembahasan": "Khas bersifat khusus/tertentu, lawan katanya adalah umum."
+},
+{
+"id": "v31",
+"subkategori": "antonim",
+"soal": "Antonim SPORADIS adalah ...",
+"pilihan": [
+"Jarang",
+"Kerap",
+"Kadang-kadang",
+"Satu-satu"
+],
+"jawaban": 1,
+"pembahasan": "Sporadis terjadi kadang-kadang/tidak teratur, lawannya sering/kerap/kontinu."
+},
+{
+"id": "v32",
+"subkategori": "antonim",
+"soal": "Antonim CHAOS adalah ...",
+"pilihan": [
+"Kacau",
+"Teratur",
+"Bising",
+"Berantakan"
+],
+"jawaban": 1,
+"pembahasan": "Chaos bermakna kacau-balau, berlawanan dengan teratur atau tenang."
+},
+{
+"id": "v33",
+"subkategori": "antonim",
+"soal": "Antonim VOKAL adalah ...",
+"pilihan": [
+"Konsonan",
+"Lantang",
+"Bersuara",
+"Jelas"
+],
+"jawaban": 0,
+"pembahasan": "Dalam fonologi, vokal berlawanan dengan konsonan."
+},
+{
+"id": "v34",
+"subkategori": "antonim",
+"soal": "Antonim MAJU adalah ...",
+"pilihan": [
+"Depan",
+"Mundur",
+"Kiri",
+"Atas"
+],
+"jawaban": 1,
+"pembahasan": "Maju berlawanan arah dengan mundur."
+},
+{
+"id": "v35",
+"subkategori": "analogi",
+"soal": "Mobil : Bensin = Manusia : ...",
+"pilihan": [
+"Air",
+"Makanan",
+"Udara",
+"Darah"
+],
+"jawaban": 1,
+"pembahasan": "Mobil memerlukan bensin sebagai sumber energi, manusia membutuhkan makanan."
+},
+{
+"id": "v36",
+"subkategori": "analogi",
+"soal": "Kamus : Kata = Peta : ...",
+"pilihan": [
+"Gambar",
+"Lokasi",
+"Arah",
+"Kertas"
+],
+"jawaban": 1,
+"pembahasan": "Kamus memuat daftar kata, peta memuat daftar lokasi/wilayah."
+},
+{
+"id": "v37",
+"subkategori": "analogi",
+"soal": "Sendok : Makan = Cangkul : ...",
+"pilihan": [
+"Petani",
+"Tanah",
+"Menyangkul",
+"Kebun"
+],
+"jawaban": 2,
+"pembahasan": "Sendok digunakan untuk makan, cangkul digunakan untuk menyangkul."
+},
+{
+"id": "v38",
+"subkategori": "analogi",
+"soal": "Kepala : Topi = Kaki : ...",
+"pilihan": [
+"Kaos",
+"Celana",
+"Sepatu",
+"Lantai"
+],
+"jawaban": 2,
+"pembahasan": "Topi ditaruh di kepala, sepatu dikenakan di kaki."
+},
+{
+"id": "v39",
+"subkategori": "analogi",
+"soal": "Dokter : Resep = Koki : ...",
+"pilihan": [
+"Dapur",
+"Makanan",
+"Menu",
+"Pisau"
+],
+"jawaban": 2,
+"pembahasan": "Dokter acuan kerjanya berdasarkan resep, koki membuat olahan berdasarkan menu."
+},
+{
+"id": "v40",
+"subkategori": "analogi",
+"soal": "Komputer : Listrik = Mobil : ...",
+"pilihan": [
+"Roda",
+"Mesin",
+"Bensin",
+"Jalan"
+],
+"jawaban": 2,
+"pembahasan": "Komputer butuh energi listrik agar menyala, mobil membutuhkan bensin."
+},
+{
+"id": "v41",
+"subkategori": "analogi",
+"soal": "Hujan : Payung = Panas : ...",
+"pilihan": [
+"Matahari",
+"Kacamata hitam",
+"Topi",
+"Awan"
+],
+"jawaban": 2,
+"pembahasan": "Pelindung tubuh dari hujan adalah payung, pelindung tubuh dari panas adalah topi."
+},
+{
+"id": "v42",
+"subkategori": "analogi",
+"soal": "Burung : Udara = Ikan : ...",
+"pilihan": [
+"Air",
+"Laut",
+"Batu",
+"Sisik"
+],
+"jawaban": 0,
+"pembahasan": "Burung bergerak di udara, ikan bergerak di dalam air."
+},
+{
+"id": "v43",
+"subkategori": "analogi",
+"soal": "Matahari : Terang = Bulan : ...",
+"pilihan": [
+"Gelap",
+"Malam",
+"Remang",
+"Bintang"
+],
+"jawaban": 2,
+"pembahasan": "Matahari memancarkan sinar terang, bulan memancarkan sinar remang."
+},
+{
+"id": "v44",
+"subkategori": "analogi",
+"soal": "Penjahit : Baju = Tukang Kayu : ...",
+"pilihan": [
+"Palu",
+"Kayu",
+"Meja",
+"Gergaji"
+],
+"jawaban": 2,
+"pembahasan": "Penjahit menghasilkan baju, tukang kayu menghasilkan meja."
+},
+{
+"id": "v45",
+"subkategori": "analogi",
+"soal": "Singa : Rusa = Kucing : ...",
+"pilihan": [
+"Anjing",
+"Tikus",
+"Susu",
+"Ikan"
+],
+"jawaban": 1,
+"pembahasan": "Singa berburu rusa sebagai mangsa utamanya, kucing berburu tikus."
+},
+{
+"id": "v46",
+"subkategori": "analogi",
+"soal": "Es : Dingin = Api : ...",
+"pilihan": [
+"Panas",
+"Merah",
+"Asap",
+"Bakar"
+],
+"jawaban": 0,
+"pembahasan": "Sifat dasar es adalah dingin, sifat dasar api adalah panas."
+},
+{
+"id": "v47",
+"subkategori": "analogi",
+"soal": "Pesawat : Pilot = Delman : ...",
+"pilihan": [
+"Kuda",
+"Kusir",
+"Sopir",
+"Masinis"
+],
+"jawaban": 1,
+"pembahasan": "Pesawat dikemudikan oleh pilot, delman dikemudikan oleh kusir."
+},
+{
+"id": "v48",
+"subkategori": "analogi",
+"soal": "Telinga : Mendengar = Mata : ...",
+"pilihan": [
+"Melihat",
+"Membaca",
+"Kacamata",
+"Wajah"
+],
+"jawaban": 0,
+"pembahasan": "Organ tubuh dan fungsi inderanya."
+},
+{
+"id": "v49",
+"subkategori": "analogi",
+"soal": "Kertas : Buku = Benang : ...",
+"pilihan": [
+"Jarum",
+"Kain",
+"Pakaian",
+"Kapas"
+],
+"jawaban": 1,
+"pembahasan": "Kertas adalah bahan penyusun buku, benang adalah bahan penyusun kain."
+},
+{
+"id": "v50",
+"subkategori": "analogi",
+"soal": "Indonesia : Jakarta = Jepang : ...",
+"pilihan": [
+"Kyoto",
+"Osaka",
+"Tokyo",
+"Hiroshima"
+],
+"jawaban": 2,
+"pembahasan": "Hubungan negara dan ibu kotanya."
+}
 ]

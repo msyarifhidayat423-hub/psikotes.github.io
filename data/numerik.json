@@ -1,132 +1,652 @@
 [
-  {
-    "id": "n1",
-    "subkategori": "deret",
-    "soal": "2, 4, 8, 16, ... Angka berikutnya?",
-    "pilihan": [
-      "24",
-      "30",
-      "32",
-      "64"
-    ],
-    "jawaban": 2,
-    "pembahasan": "Dikali 2 setiap langkah."
-  },
-  {
-    "id": "n2",
-    "subkategori": "deret",
-    "soal": "3, 6, 9, 12, ... Angka berikutnya?",
-    "pilihan": [
-      "14",
-      "15",
-      "16",
-      "18"
-    ],
-    "jawaban": 1,
-    "pembahasan": "Ditambah 3."
-  },
-  {
-    "id": "n3",
-    "subkategori": "deret",
-    "soal": "1, 4, 9, 16, ... Angka berikutnya?",
-    "pilihan": [
-      "20",
-      "24",
-      "25",
-      "36"
-    ],
-    "jawaban": 2,
-    "pembahasan": "Bilangan kuadrat: 1², 2², 3², 4², 5² = 25."
-  },
-  {
-    "id": "n4",
-    "subkategori": "deret",
-    "soal": "5, 10, 20, 40, ... Angka berikutnya?",
-    "pilihan": [
-      "50",
-      "60",
-      "80",
-      "100"
-    ],
-    "jawaban": 2,
-    "pembahasan": "Dikali 2."
-  },
-  {
-    "id": "n5",
-    "subkategori": "deret",
-    "soal": "100, 90, 80, 70, ... Angka berikutnya?",
-    "pilihan": [
-      "50",
-      "60",
-      "65",
-      "75"
-    ],
-    "jawaban": 1,
-    "pembahasan": "Dikurangi 10."
-  },
-  {
-    "id": "n6",
-    "subkategori": "deret",
-    "soal": "2, 3, 5, 8, 13, ... Angka berikutnya?",
-    "pilihan": [
-      "18",
-      "20",
-      "21",
-      "24"
-    ],
-    "jawaban": 2,
-    "pembahasan": "Pola Fibonacci: 8 + 13 = 21."
-  },
-  {
-    "id": "n7",
-    "subkategori": "hitungan",
-    "soal": "15% dari 200 adalah ...",
-    "pilihan": [
-      "20",
-      "25",
-      "30",
-      "35"
-    ],
-    "jawaban": 2,
-    "pembahasan": "0,15 × 200 = 30."
-  },
-  {
-    "id": "n8",
-    "subkategori": "hitungan",
-    "soal": "125 + 275 = ...",
-    "pilihan": [
-      "350",
-      "400",
-      "425",
-      "450"
-    ],
-    "jawaban": 1,
-    "pembahasan": "125 + 275 = 400."
-  },
-  {
-    "id": "n9",
-    "subkategori": "hitungan",
-    "soal": "Kecepatan 60 km/jam selama 2,5 jam menempuh jarak ...",
-    "pilihan": [
-      "120 km",
-      "135 km",
-      "150 km",
-      "160 km"
-    ],
-    "jawaban": 2,
-    "pembahasan": "60 × 2,5 = 150 km."
-  },
-  {
-    "id": "n10",
-    "subkategori": "hitungan",
-    "soal": "Rata-rata dari 70, 80, dan 90 adalah ...",
-    "pilihan": [
-      "70",
-      "75",
-      "80",
-      "85"
-    ],
-    "jawaban": 2,
-    "pembahasan": "(70+80+90) / 3 = 80."
-  }
+{
+"id": "n1",
+"subkategori": "deret",
+"soal": "1, 3, 6, 10, 15, ... Angka berikutnya?",
+"pilihan": [
+"18",
+"20",
+"21",
+"25"
+],
+"jawaban": 2,
+"pembahasan": "Pola penambahan bertambah 1: (+2, +3, +4, +5, +6). Jadi 15 + 6 = 21."
+},
+{
+"id": "n2",
+"subkategori": "deret",
+"soal": "80, 40, 20, 10, ... Angka berikutnya?",
+"pilihan": [
+"5",
+"2,5",
+"0",
+"8"
+],
+"jawaban": 0,
+"pembahasan": "Setiap suku dibagi 2. Maka 10 / 2 = 5."
+},
+{
+"id": "n3",
+"subkategori": "deret",
+"soal": "3, 8, 15, 24, 35, ... Angka berikutnya?",
+"pilihan": [
+"42",
+"48",
+"50",
+"52"
+],
+"jawaban": 1,
+"pembahasan": "Pola selisih bertambah 2: (+5, +7, +9, +11, +13). Maka 35 + 13 = 48."
+},
+{
+"id": "n4",
+"subkategori": "hitungan",
+"soal": "Berapakah hasil dari 3/4 + 1/2?",
+"pilihan": [
+"1",
+"1,25",
+"1,5",
+"1,75"
+],
+"jawaban": 1,
+"pembahasan": "3/4 + 2/4 = 5/4 = 1,25."
+},
+{
+"id": "n5",
+"subkategori": "hitungan",
+"soal": "Berapakah 25% dari 320?",
+"pilihan": [
+"60",
+"70",
+"80",
+"90"
+],
+"jawaban": 2,
+"pembahasan": "0,25 x 320 = 80."
+},
+{
+"id": "n6",
+"subkategori": "hitungan",
+"soal": "Berapakah nilai dari √144 + √169?",
+"pilihan": [
+"23",
+"25",
+"27",
+"29"
+],
+"jawaban": 1,
+"pembahasan": "12 + 13 = 25."
+},
+{
+"id": "n7",
+"subkategori": "perbandingan",
+"soal": "Usia Andi dan Budi berbanding 3 : 5. Jika jumlah usia mereka adalah 40 tahun, berapa usia Budi?",
+"pilihan": [
+"15 tahun",
+"20 tahun",
+"25 tahun",
+"30 tahun"
+],
+"jawaban": 2,
+"pembahasan": "Usia Budi = (5 / (3 + 5)) x 40 = (5/8) x 40 = 25 tahun."
+},
+{
+"id": "n8",
+"subkategori": "kecepatan",
+"soal": "Seseorang berjalan dengan kecepatan 5 km/jam. Berapa jarak yang ditempuh dalam waktu 3 jam 30 menit?",
+"pilihan": [
+"15 km",
+"16,5 km",
+"17,5 km",
+"18 km"
+],
+"jawaban": 2,
+"pembahasan": "Jarak = Kecepatan x Waktu = 5 x 3,5 = 17,5 km."
+},
+{
+"id": "n9",
+"subkategori": "deret",
+"soal": "2, 5, 10, 17, 26, ... Angka berikutnya?",
+"pilihan": [
+"35",
+"37",
+"39",
+"40"
+],
+"jawaban": 1,
+"pembahasan": "Pola n² + 1: 1²+1=2, 2²+1=5, 3²+1=10, 4²+1=17, 5²+1=26, 6²+1=37."
+},
+{
+"id": "n10",
+"subkategori": "untung_rugi",
+"soal": "Pedagang membeli barang seharga Rp500.000 dan menjualnya dengan keuntungan 12%. Berapa harga jualnya?",
+"pilihan": [
+"Rp550.000",
+"Rp560.000",
+"Rp570.000",
+"Rp580.000"
+],
+"jawaban": 1,
+"pembahasan": "Untung = 12% x 500.000 = 60.000. Harga jual = 500.000 + 60.000 = Rp560.000."
+},
+{
+"id": "n11",
+"subkategori": "deret",
+"soal": "10, 2, 20, 4, 30, 6, ... Angka berikutnya?",
+"pilihan": [
+"32",
+"38",
+"40",
+"8"
+],
+"jawaban": 2,
+"pembahasan": "Dua deret selang-seling: (10, 20, 30, 40) dan (2, 4, 6, 8). Suku berikutnya dari deret pertama adalah 40."
+},
+{
+"id": "n12",
+"subkategori": "hitungan",
+"soal": "12 x 15 - 50 = ...",
+"pilihan": [
+"120",
+"130",
+"140",
+"150"
+],
+"jawaban": 1,
+"pembahasan": "12 x 15 = 180; 180 - 50 = 130."
+},
+{
+"id": "n13",
+"subkategori": "rata_rata",
+"soal": "Nilai rata-rata 4 siswa adalah 80. Jika masuk nilai siswa ke-5 yaitu 90, berapa rata-rata sekarang?",
+"pilihan": [
+"81",
+"82",
+"83",
+"84"
+],
+"jawaban": 1,
+"pembahasan": "Total nilai baru = (4 x 80) + 90 = 320 + 90 = 410. Rata-rata baru = 410 / 5 = 82."
+},
+{
+"id": "n14",
+"subkategori": "pekerjaan_bersama",
+"soal": "Sebuah pekerjaan diselesaikan A dalam 6 hari dan B dalam 3 hari. Berapa hari jika dikerjakan bersama?",
+"pilihan": [
+"1 hari",
+"2 hari",
+"3 hari",
+"4 hari"
+],
+"jawaban": 1,
+"pembahasan": "1/T = 1/6 + 1/3 = 3/6 = 1/2. T = 2 hari."
+},
+{
+"id": "n15",
+"subkategori": "deret",
+"soal": "1, 2, 4, 7, 11, 16, ... Angka berikutnya?",
+"pilihan": [
+"20",
+"22",
+"24",
+"25"
+],
+"jawaban": 1,
+"pembahasan": "Pola penambahan bertambah 1: (+1, +2, +3, +4, +5, +6). Maka 16 + 6 = 22."
+},
+{
+"id": "n16",
+"subkategori": "hitungan",
+"soal": "Berapakah hasil dari 0,4 x 0,25?",
+"pilihan": [
+"0,01",
+"0,1",
+"0,25",
+"1,0"
+],
+"jawaban": 1,
+"pembahasan": "0,4 x 0,25 = 0,100 = 0,1."
+},
+{
+"id": "n17",
+"subkategori": "persentase",
+"soal": "Berapa persentase 15 dari 60?",
+"pilihan": [
+"20%",
+"25%",
+"30%",
+"35%"
+],
+"jawaban": 1,
+"pembahasan": "(15 / 60) x 100% = 1/4 x 100% = 25%."
+},
+{
+"id": "n18",
+"subkategori": "deret",
+"soal": "4, 9, 19, 39, ... Angka berikutnya?",
+"pilihan": [
+"69",
+"74",
+"79",
+"89"
+],
+"jawaban": 2,
+"pembahasan": "Pola dikali 2 lalu ditambah 1: (4x2+1=9, 9x2+1=19, 19x2+1=39, 39x2+1=79)."
+},
+{
+"id": "n19",
+"subkategori": "hitungan",
+"soal": "(18 + 22) : (8 - 3) = ...",
+"pilihan": [
+"6",
+"7",
+"8",
+"9"
+],
+"jawaban": 2,
+"pembahasan": "40 : 5 = 8."
+},
+{
+"id": "n20",
+"subkategori": "perbandingan",
+"soal": "8 orang pekerja dapat menyelesaikan proyek dalam 15 hari. Berapa pekerja yang dibutuhkan agar selesai dalam 10 hari?",
+"pilihan": [
+"10 orang",
+"12 orang",
+"14 orang",
+"16 orang"
+],
+"jawaban": 1,
+"pembahasan": "Perbandingan berbalik nilai: (8 x 15) / 10 = 120 / 10 = 12 orang."
+},
+{
+"id": "n21",
+"subkategori": "deret",
+"soal": "2, 6, 12, 20, 30, ... Angka berikutnya?",
+"pilihan": [
+"36",
+"40",
+"42",
+"48"
+],
+"jawaban": 2,
+"pembahasan": "Pola n(n+1): 1x2=2, 2x3=6, 3x4=12, 4x5=20, 5x6=30, 6x7=42."
+},
+{
+"id": "n22",
+"subkategori": "untung_rugi",
+"soal": "Baju seharga Rp100.000 mendapat diskon 20%, kemudian mendapat diskon tambahan 10%. Berapa harga akhirnya?",
+"pilihan": [
+"Rp70.000",
+"Rp72.000",
+"Rp75.000",
+"Rp80.000"
+],
+"jawaban": 1,
+"pembahasan": "Setelah diskon 20% = Rp80.000. Diskon tambahan 10% dari 80.000 = Rp8.000. Harga akhir = Rp72.000."
+},
+{
+"id": "n23",
+"subkategori": "hitungan",
+"soal": "5³ - 4³ = ...",
+"pilihan": [
+"37",
+"61",
+"71",
+"81"
+],
+"jawaban": 1,
+"pembahasan": "125 - 64 = 61."
+},
+{
+"id": "n24",
+"subkategori": "kecepatan",
+"soal": "Mobil A berangkat pukul 08.00 dengan kecepatan 40 km/jam. Mobil B berangkat pukul 09.00 menyusul dengan kecepatan 60 km/jam. Pukul berapa B menyusul A?",
+"pilihan": [
+"10.00",
+"11.00",
+"11.30",
+"12.00"
+],
+"jawaban": 1,
+"pembahasan": "Selisih jarak jam 09.00 = 40 km. Waktu menyusul = 40 / (60 - 40) = 2 jam. Menyusul pkl 09.00 + 2 jam = 11.00."
+},
+{
+"id": "n25",
+"subkategori": "deret",
+"soal": "A, C, E, G, ... Huruf berikutnya?",
+"pilihan": [
+"H",
+"I",
+"J",
+"K"
+],
+"jawaban": 1,
+"pembahasan": "Pola melompati 1 huruf dalam abjad (+2): A, (B), C, (D), E, (F), G, (H), I."
+},
+{
+"id": "n26",
+"subkategori": "hitungan",
+"soal": "2,5 x 4 + 10 = ...",
+"pilihan": [
+"18",
+"20",
+"22",
+"25"
+],
+"jawaban": 1,
+"pembahasan": "2,5 x 4 = 10; 10 + 10 = 20."
+},
+{
+"id": "n27",
+"subkategori": "hitungan",
+"soal": "Manakah nilai pecahan yang paling besar di antara berikut?",
+"pilihan": [
+"1/2",
+"2/3",
+"3/5",
+"4/7"
+],
+"jawaban": 1,
+"pembahasan": "1/2 = 0,5; 2/3 ≈ 0,667; 3/5 = 0,6; 4/7 ≈ 0,571. Nilai terbesar adalah 2/3."
+},
+{
+"id": "n28",
+"subkategori": "deret",
+"soal": "100, 98, 94, 86, 70, ... Angka berikutnya?",
+"pilihan": [
+"38",
+"40",
+"48",
+"54"
+],
+"jawaban": 0,
+"pembahasan": "Pola pengurangan dikali 2: (-2, -4, -8, -16, -32). Maka 70 - 32 = 38."
+},
+{
+"id": "n29",
+"subkategori": "hitungan",
+"soal": "Jika 2x + 5 = 19, berapakah nilai x?",
+"pilihan": [
+"5",
+"6",
+"7",
+"8"
+],
+"jawaban": 2,
+"pembahasan": "2x = 19 - 5 = 14. x = 7."
+},
+{
+"id": "n30",
+"subkategori": "aritmatika",
+"soal": "Uang sebesar Rp1.000.000 disimpan dengan bunga tunggal 6% per tahun. Berapa total tabungan setelah 8 bulan?",
+"pilihan": [
+"Rp1.030.000",
+"Rp1.040.000",
+"Rp1.050.000",
+"Rp1.060.000"
+],
+"jawaban": 1,
+"pembahasan": "Bunga = (8/12) x 6% x 1.000.000 = 40.000. Total = Rp1.040.000."
+},
+{
+"id": "n31",
+"subkategori": "deret",
+"soal": "3, 4, 7, 11, 18, 29, ... Angka berikutnya?",
+"pilihan": [
+"37",
+"40",
+"47",
+"50"
+],
+"jawaban": 2,
+"pembahasan": "Pola Fibonacci (penjumlahan dua angka sebelumnya): 18 + 29 = 47."
+},
+{
+"id": "n32",
+"subkategori": "hitungan",
+"soal": "√0,09 = ...",
+"pilihan": [
+"0,03",
+"0,3",
+"3",
+"0,003"
+],
+"jawaban": 1,
+"pembahasan": "(0,3)² = 0,09, maka √0,09 = 0,3."
+},
+{
+"id": "n33",
+"subkategori": "perbandingan",
+"soal": "Di sebuah kelas terdapat 18 siswa laki-laki dan 12 siswa perempuan. Berapa persentase siswa perempuan?",
+"pilihan": [
+"30%",
+"40%",
+"50%",
+"60%"
+],
+"jawaban": 1,
+"pembahasan": "Total siswa = 30. Persentase perempuan = (12 / 30) x 100% = 40%."
+},
+{
+"id": "n34",
+"subkategori": "deret",
+"soal": "81, 64, 49, 36, ... Angka berikutnya?",
+"pilihan": [
+"20",
+"25",
+"27",
+"30"
+],
+"jawaban": 1,
+"pembahasan": "Pola bilangan kuadrat menurun: 9², 8², 7², 6², 5² = 25."
+},
+{
+"id": "n35",
+"subkategori": "hitungan",
+"soal": "15² - 10² = ...",
+"pilihan": [
+"100",
+"125",
+"150",
+"175"
+],
+"jawaban": 1,
+"pembahasan": "225 - 100 = 125."
+},
+{
+"id": "n36",
+"subkategori": "kecepatan",
+"soal": "Kereta berangkat pukul 06.15 dan sampai tujuan pukul 09.45. Jika jaraknya 210 km, berapa kecepatan rata-ratanya?",
+"pilihan": [
+"50 km/jam",
+"60 km/jam",
+"70 km/jam",
+"80 km/jam"
+],
+"jawaban": 1,
+"pembahasan": "Waktu = 3,5 jam. Kecepatan = 210 / 3,5 = 60 km/jam."
+},
+{
+"id": "n37",
+"subkategori": "deret",
+"soal": "1, 3, 2, 4, 3, 5, ... Angka berikutnya?",
+"pilihan": [
+"4",
+"5",
+"6",
+"7"
+],
+"jawaban": 0,
+"pembahasan": "Pola berganti: +2, lalu -1. Maka 5 - 1 = 4."
+},
+{
+"id": "n38",
+"subkategori": "rata_rata",
+"soal": "Rata-rata nilai 10 siswa adalah 70 dan rata-rata 15 siswa lainnya adalah 80. Berapa rata-rata gabungan seluruh siswa?",
+"pilihan": [
+"74",
+"75",
+"76",
+"77"
+],
+"jawaban": 2,
+"pembahasan": "Rata-rata = ((10x70) + (15x80)) / 25 = (700 + 1200) / 25 = 1900 / 25 = 76."
+},
+{
+"id": "n39",
+"subkategori": "hitungan",
+"soal": "40 + 20 x 2 - 10 = ...",
+"pilihan": [
+"70",
+"80",
+"110",
+"120"
+],
+"jawaban": 0,
+"pembahasan": "Dahulukan perkalian: 20 x 2 = 40. Lalu 40 + 40 - 10 = 70."
+},
+{
+"id": "n40",
+"subkategori": "deret",
+"soal": "2, 4, 12, 48, ... Angka berikutnya?",
+"pilihan": [
+"96",
+"144",
+"192",
+"240"
+],
+"jawaban": 3,
+"pembahasan": "Pola perkalian bertambah: (x2, x3, x4, x5). Maka 48 x 5 = 240."
+},
+{
+"id": "n41",
+"subkategori": "untung_rugi",
+"soal": "Barang dibeli seharga Rp200.000 dan dijual seharga Rp250.000. Berapa persentase keuntungannya?",
+"pilihan": [
+"15%",
+"20%",
+"25%",
+"30%"
+],
+"jawaban": 2,
+"pembahasan": "Untung = 50.000. Persentase = (50.000 / 200.000) x 100% = 25%."
+},
+{
+"id": "n42",
+"subkategori": "deret",
+"soal": "Z, Y, X, W, ... Huruf berikutnya?",
+"pilihan": [
+"U",
+"V",
+"T",
+"S"
+],
+"jawaban": 1,
+"pembahasan": "Urutan abjad mundur 1 langkah. Sebelum W adalah V."
+},
+{
+"id": "n43",
+"subkategori": "hitungan",
+"soal": "Jika a = 4 dan b = 3, berapakah nilai dari 2a² - 3b?",
+"pilihan": [
+"20",
+"23",
+"25",
+"29"
+],
+"jawaban": 1,
+"pembahasan": "2(4²) - 3(3) = 2(16) - 9 = 32 - 9 = 23."
+},
+{
+"id": "n44",
+"subkategori": "perbandingan",
+"soal": "Skala peta adalah 1 : 500.000. Jika jarak pada peta adalah 4 cm, berapa jarak sebenarnya?",
+"pilihan": [
+"10 km",
+"15 km",
+"20 km",
+"25 km"
+],
+"jawaban": 2,
+"pembahasan": "Jarak sebenarnya = 4 cm x 500.000 = 2.000.000 cm = 20 km."
+},
+{
+"id": "n45",
+"subkategori": "deret",
+"soal": "7, 10, 16, 28, 52, ... Angka berikutnya?",
+"pilihan": [
+"80",
+"96",
+"100",
+"104"
+],
+"jawaban": 2,
+"pembahasan": "Selisih dikali 2: (+3, +6, +12, +24, +48). Maka 52 + 48 = 100."
+},
+{
+"id": "n46",
+"subkategori": "hitungan",
+"soal": "1/4 + 0,5 x 2 = ...",
+"pilihan": [
+"1,25",
+"1,5",
+"1,75",
+"2,25"
+],
+"jawaban": 0,
+"pembahasan": "0,5 x 2 = 1. Kemudian 0,25 + 1 = 1,25."
+},
+{
+"id": "n47",
+"subkategori": "perbandingan",
+"soal": "Tiga orang membagi uang Rp900.000 dengan perbandingan 2 : 3 : 4. Berapa bagian uang terbanyak?",
+"pilihan": [
+"Rp200.000",
+"Rp300.000",
+"Rp400.000",
+"Rp500.000"
+],
+"jawaban": 2,
+"pembahasan": "Jumlah rasio = 2 + 3 + 4 = 9. Bagian terbanyak = (4/9) x 900.000 = Rp400.000."
+},
+{
+"id": "n48",
+"subkategori": "deret",
+"soal": "50, 45, 39, 32, 24, ... Angka berikutnya?",
+"pilihan": [
+"15",
+"16",
+"17",
+"18"
+],
+"jawaban": 0,
+"pembahasan": "Pola pengurangan bertambah 1: (-5, -6, -7, -8, -9). Maka 24 - 9 = 15."
+},
+{
+"id": "n49",
+"subkategori": "kecepatan",
+"soal": "Sebuah pompa mengisi kolam berkapasitas 600 liter dalam waktu 20 menit. Berapa debit air pompa tersebut?",
+"pilihan": [
+"20 liter/menit",
+"25 liter/menit",
+"30 liter/menit",
+"35 liter/menit"
+],
+"jawaban": 2,
+"pembahasan": "Debit = Volume / Waktu = 600 / 20 = 30 liter/menit."
+},
+{
+"id": "n50",
+"subkategori": "hitungan",
+"soal": "Berapakah hasil dari 2⁴ x 5²?",
+"pilihan": [
+"200",
+"300",
+"400",
+"500"
+],
+"jawaban": 2,
+"pembahasan": "2⁴ = 16, 5² = 25. Maka 16 x 25 = 400."
+}
 ]

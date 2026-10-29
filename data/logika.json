@@ -1,106 +1,652 @@
 [
-  {
-    "id": "l1",
-    "subkategori": "silogisme",
-    "soal": "Semua prajurit disiplin. Budi adalah prajurit. Maka ...",
-    "pilihan": [
-      "Budi disiplin",
-      "Budi tidak disiplin",
-      "Semua disiplin adalah prajurit",
-      "Budi bukan prajurit"
-    ],
-    "jawaban": 0,
-    "pembahasan": "Budi termasuk prajurit, sehingga mengikuti sifat prajurit."
-  },
-  {
-    "id": "l2",
-    "subkategori": "implikasi",
-    "soal": "Jika hujan, maka jalan basah. Jalan tidak basah. Maka ...",
-    "pilihan": [
-      "Hujan",
-      "Tidak hujan",
-      "Mungkin hujan",
-      "Jalan kering karena panas"
-    ],
-    "jawaban": 1,
-    "pembahasan": "Kontraposisi: bukan basah → bukan hujan."
-  },
-  {
-    "id": "l3",
-    "subkategori": "urutan",
-    "soal": "A lebih tinggi dari B, B lebih tinggi dari C. Siapa yang paling pendek?",
-    "pilihan": [
-      "A",
-      "B",
-      "C",
-      "Tidak dapat ditentukan"
-    ],
-    "jawaban": 2,
-    "pembahasan": "Urutan: A > B > C."
-  },
-  {
-    "id": "l4",
-    "subkategori": "urutan",
-    "soal": "Andi lebih tua dari Budi. Citra lebih muda dari Budi. Siapa yang paling tua?",
-    "pilihan": [
-      "Andi",
-      "Budi",
-      "Citra",
-      "Tidak dapat ditentukan"
-    ],
-    "jawaban": 0,
-    "pembahasan": "Andi > Budi > Citra."
-  },
-  {
-    "id": "l5",
-    "subkategori": "silogisme",
-    "soal": "Semua kucing adalah hewan. Sebagian hewan buas. Kesimpulan yang pasti benar ...",
-    "pilihan": [
-      "Semua kucing buas",
-      "Sebagian kucing buas",
-      "Tidak ada kucing buas",
-      "Tidak dapat disimpulkan apakah kucing buas"
-    ],
-    "jawaban": 3,
-    "pembahasan": "Sebagian hewan yang buas belum tentu mencakup kucing."
-  },
-  {
-    "id": "l6",
-    "subkategori": "hari",
-    "soal": "Hari ini Rabu. Sepuluh hari lagi adalah hari ...",
-    "pilihan": [
-      "Jumat",
-      "Sabtu",
-      "Minggu",
-      "Senin"
-    ],
-    "jawaban": 1,
-    "pembahasan": "10 hari = 1 minggu + 3 hari; Rabu + 3 = Sabtu."
-  },
-  {
-    "id": "l7",
-    "subkategori": "silogisme",
-    "soal": "Semua A adalah B dan semua B adalah C. Maka ...",
-    "pilihan": [
-      "Semua C adalah A",
-      "Semua A adalah C",
-      "Sebagian C bukan B",
-      "Tidak ada A adalah C"
-    ],
-    "jawaban": 1,
-    "pembahasan": "Silogisme transitif."
-  },
-  {
-    "id": "l8",
-    "subkategori": "pola",
-    "soal": "Senin, Rabu, Jumat, ... Hari berikutnya?",
-    "pilihan": [
-      "Sabtu",
-      "Minggu",
-      "Senin",
-      "Selasa"
-    ],
-    "jawaban": 1,
-    "pembahasan": "Loncat satu hari: Jumat + 2 = Minggu."
-  }
+{
+"id": "q1",
+"subkategori": "silogisme",
+"soal": "Semua PNS adalah pegawai negeri. Sebagian pegawai negeri adalah guru. Kesimpulan yang tepat adalah ...",
+"pilihan": [
+"Sebagian PNS adalah guru",
+"Semua PNS adalah guru",
+"Tidak ada PNS yang menjadi guru",
+"Tidak dapat disimpulkan bahwa PNS adalah guru"
+],
+"jawaban": 3,
+"pembahasan": "Sebagian pegawai negeri yang menjadi guru belum tentu mencakup PNS."
+},
+{
+"id": "q2",
+"subkategori": "analogi",
+"soal": "Mobil : Bensin = Manusia : ...",
+"pilihan": [
+"Air",
+"Makanan",
+"Udara",
+"Darah"
+],
+"jawaban": 1,
+"pembahasan": "Mobil membutuhkan bensin sebagai sumber energi utama, sebagaimana manusia membutuhkan makanan."
+},
+{
+"id": "q3",
+"subkategori": "sinonim",
+"soal": "RELATIF = ...",
+"pilihan": [
+"Mutlak",
+"Nisbi",
+"Pasti",
+"Statis"
+],
+"jawaban": 1,
+"pembahasan": "Relatif memiliki arti nisbi atau bergantung pada sudut pandang tertentu."
+},
+{
+"id": "q4",
+"subkategori": "antonim",
+"soal": "NOMADEN = ...",
+"pilihan": [
+"Menetap",
+"Pindah",
+"Berkelana",
+"Acak"
+],
+"jawaban": 0,
+"pembahasan": "Nomaden berarti berpindah-pindah, lawan katanya adalah menetap."
+},
+{
+"id": "q5",
+"subkategori": "deret_angka",
+"soal": "2, 4, 8, 16, 32, ...",
+"pilihan": [
+"48",
+"64",
+"50",
+"60"
+],
+"jawaban": 1,
+"pembahasan": "Pola deret dikali 2: 32 x 2 = 64."
+},
+{
+"id": "q6",
+"subkategori": "deret_angka",
+"soal": "3, 5, 9, 17, 33, ...",
+"pilihan": [
+"49",
+"55",
+"65",
+"67"
+],
+"jawaban": 2,
+"pembahasan": "Pola selisih bertambah dua kali lipat (+2, +4, +8, +16, +32). Jadi 33 + 32 = 65."
+},
+{
+"id": "q7",
+"subkategori": "deret_angka",
+"soal": "100, 95, 85, 70, 50, ...",
+"pilihan": [
+"20",
+"25",
+"30",
+"35"
+],
+"jawaban": 1,
+"pembahasan": "Pola pengurangan bertambah 5 (-5, -10, -15, -20, -25). Jadi 50 - 25 = 25."
+},
+{
+"id": "q8",
+"subkategori": "aritmatika",
+"soal": "Sebuah baju seharga Rp200.000 mendapat potongan diskon 20%. Berapa harga baju setelah diskon?",
+"pilihan": [
+"Rp140.000",
+"Rp150.000",
+"Rp160.000",
+"Rp180.000"
+],
+"jawaban": 2,
+"pembahasan": "Diskon = 20% x 200.000 = 40.000. Harga bayar = 200.000 - 40.000 = Rp160.000."
+},
+{
+"id": "q9",
+"subkategori": "aritmatika",
+"soal": "Rata-rata dari nilai 4, 8, 12, 16, dan 20 adalah ...",
+"pilihan": [
+"10",
+"12",
+"14",
+"16"
+],
+"jawaban": 1,
+"pembahasan": "(4 + 8 + 12 + 16 + 20) / 5 = 60 / 5 = 12."
+},
+{
+"id": "q10",
+"subkategori": "aritmatika",
+"soal": "Jika 5 orang pekerja dapat menyelesaikan sebuah pekerjaan dalam waktu 12 hari, berapa hari yang dibutuhkan jika pekerjaan dilakukan oleh 6 orang pekerja?",
+"pilihan": [
+"8 hari",
+"9 hari",
+"10 hari",
+"11 hari"
+],
+"jawaban": 2,
+"pembahasan": "Perbandingan berbalik nilai: (5 x 12) / 6 = 60 / 6 = 10 hari."
+},
+{
+"id": "q11",
+"subkategori": "urutan",
+"soal": "Anton berlari lebih cepat dari Bimo. Bimo berlari lebih lambat dari Candra, tetapi Candra berlari lebih lambat dari Anton. Siapakah yang berlari paling cepat?",
+"pilihan": [
+"Anton",
+"Bimo",
+"Candra",
+"Tidak dapat ditentukan"
+],
+"jawaban": 0,
+"pembahasan": "Urutan dari tercepat: Anton > Candra > Bimo. Maka Anton yang paling cepat."
+},
+{
+"id": "q12",
+"subkategori": "hari",
+"soal": "Jika kemarin lusa adalah hari Selasa, maka lusa adalah hari ...",
+"pilihan": [
+"Jumat",
+"Sabtu",
+"Minggu",
+"Senin"
+],
+"jawaban": 1,
+"pembahasan": "Kemarin lusa = Selasa -> Hari ini = Kamis. Lusa = Kamis + 2 hari = Sabtu."
+},
+{
+"id": "q13",
+"subkategori": "implikasi",
+"soal": "Jika lampu lalu lintas berwarna hijau, maka kendaraan berjalan. Lampu lalu lintas tidak berwarna hijau. Maka ...",
+"pilihan": [
+"Kendaraan pasti berhenti",
+"Kendaraan tetap berjalan",
+"Kendaraan berjalan lambat",
+"Tidak dapat disimpulkan bahwa kendaraan pasti berhenti"
+],
+"jawaban": 3,
+"pembahasan": "Menyangkal anteseden (~P) tidak secara otomatis menghasilkan penangkalan konsekuen (~Q) dalam logika formal baku."
+},
+{
+"id": "q14",
+"subkategori": "analogi",
+"soal": "Kamus : Kata = Peta : ...",
+"pilihan": [
+"Gambar",
+"Lokasi",
+"Arah",
+"Kertas"
+],
+"jawaban": 1,
+"pembahasan": "Kamus memuat kumpulan kata, sedangkan peta memuat kumpulan lokasi/wilayah."
+},
+{
+"id": "q15",
+"subkategori": "silogisme",
+"soal": "Semua peserta ujian wajib membawa kartu ujian. Dini tidak membawa kartu ujian. Kesimpulannya adalah ...",
+"pilihan": [
+"Dini adalah peserta ujian yang terlambat",
+"Dini bukan peserta ujian",
+"Dini tetap boleh ikut ujian",
+"Dini lupa membawa kartu ujian"
+],
+"jawaban": 1,
+"pembahasan": "Modus Tollens: Jika P maka Q. Bukan Q, maka bukan P (Dini bukan peserta ujian)."
+},
+{
+"id": "q16",
+"subkategori": "sinonim",
+"soal": "INSINUASI = ...",
+"pilihan": [
+"Sindiran",
+"Pujian",
+"Tuduhan langsung",
+"Sanggahan"
+],
+"jawaban": 0,
+"pembahasan": "Insinuasi adalah tuduhan tersembunyi/sindiran."
+},
+{
+"id": "q17",
+"subkategori": "antonim",
+"soal": "HETEROGEN = ...",
+"pilihan": [
+"Bervariasi",
+"Homogen",
+"Campuran",
+"Berbeda"
+],
+"jawaban": 1,
+"pembahasan": "Heterogen berarti beranekaragam/berbeda, lawan katanya adalah homogen (sejenis)."
+},
+{
+"id": "q18",
+"subkategori": "aritmatika",
+"soal": "Berapakah hasil dari 2^5 + 3^2?",
+"pilihan": [
+"39",
+"41",
+"43",
+"45"
+],
+"jawaban": 1,
+"pembahasan": "2^5 = 32, 3^2 = 9. Hasil = 32 + 9 = 41."
+},
+{
+"id": "q19",
+"subkategori": "deret_angka",
+"soal": "1, 1, 2, 3, 5, 8, 13, ...",
+"pilihan": [
+"18",
+"20",
+"21",
+"24"
+],
+"jawaban": 2,
+"pembahasan": "Deret Fibonacci: Angka berikutnya adalah jumlah dari 2 angka sebelumnya (8 + 13 = 21)."
+},
+{
+"id": "q20",
+"subkategori": "wawasan_kebangsaan",
+"soal": "Lambang Negara Indonesia, Garuda Pancasila, dirancang oleh ...",
+"pilihan": [
+"Ir. Soekarno",
+"Sultan Hamid II",
+"Moh. Yamin",
+"Mr. Soepomo"
+],
+"jawaban": 1,
+"pembahasan": "Garuda Pancasila dirancang oleh Sultan Hamid II dari Pontianak."
+},
+{
+"id": "q21",
+"subkategori": "silogisme",
+"soal": "Semua tanaman di kebun memerlukan air. Sebagian tanaman di kebun berbuah lebat. Kesimpulan yang tepat adalah ...",
+"pilihan": [
+"Semua tanaman yang berbuah lebat tidak memerlukan air",
+"Sebagian tanaman di kebun yang berbuah lebat memerlukan air",
+"Tanaman yang tidak berbuah lebat tidak memerlukan air",
+"Semua tanaman yang memerlukan air berbuah lebat"
+],
+"jawaban": 1,
+"pembahasan": "Karena semua tanaman butuh air, maka tanaman berbuah lebat di kebun juga memerlukan air."
+},
+{
+"id": "q22",
+"subkategori": "urutan",
+"soal": "Rumah A berada di sebelah timur Rumah B. Rumah B berada di sebelah timur Rumah C. Rumah yang terletak paling barat adalah ...",
+"pilihan": [
+"Rumah A",
+"Rumah B",
+"Rumah C",
+"Tidak dapat ditentukan"
+],
+"jawaban": 2,
+"pembahasan": "Urutan lokasi dari timur ke barat: Rumah A -> Rumah B -> Rumah C. Paling barat adalah Rumah C."
+},
+{
+"id": "q23",
+"subkategori": "hari",
+"soal": "Jika 3 hari yang lalu adalah hari Jumat, hari apakah 4 hari yang akan datang?",
+"pilihan": [
+"Rabu",
+"Kamis",
+"Jumat",
+"Sabtu"
+],
+"jawaban": 2,
+"pembahasan": "3 hari lalu = Jumat -> Hari ini = Senin. 4 hari mendatang = Senin + 4 hari = Jumat."
+},
+{
+"id": "q24",
+"subkategori": "analogi",
+"soal": "Sendok : Makan = Cangkul : ...",
+"pilihan": [
+"Petani",
+"Tanah",
+"Menyangkul",
+"Kebun"
+],
+"jawaban": 2,
+"pembahasan": "Sendok digunakan untuk makan, cangkul digunakan untuk menyangkul/menggali."
+},
+{
+"id": "q25",
+"subkategori": "sinonim",
+"soal": "EVAKUASI = ...",
+"pilihan": [
+"Penyelamatan",
+"Pengungsian",
+"Pembersihan",
+"Penataan"
+],
+"jawaban": 1,
+"pembahasan": "Evakuasi adalah pemindahan/pengungsian penduduk dari tempat yang berbahaya."
+},
+{
+"id": "q26",
+"subkategori": "antonim",
+"soal": "PROSPEKTIF = ...",
+"pilihan": [
+"Cerah",
+"Masa depan",
+"Suram",
+"Menjanjikan"
+],
+"jawaban": 2,
+"pembahasan": "Prospektif berarti memiliki prospek/harapan baik di masa depan, lawan katanya adalah suram."
+},
+{
+"id": "q27",
+"subkategori": "aritmatika",
+"soal": "Sebuah kendaraan bergerak dengan kecepatan 60 km/jam selama 2,5 jam. Berapa jarak total yang ditempuh?",
+"pilihan": [
+"120 km",
+"140 km",
+"150 km",
+"160 km"
+],
+"jawaban": 2,
+"pembahasan": "Jarak = Kecepatan x Waktu = 60 x 2,5 = 150 km."
+},
+{
+"id": "q28",
+"subkategori": "deret_angka",
+"soal": "5, 10, 8, 16, 14, 28, ...",
+"pilihan": [
+"26",
+"30",
+"32",
+"24"
+],
+"jawaban": 0,
+"pembahasan": "Pola berganti: dikali 2, lalu dikurangi 2 (x2, -2). 28 - 2 = 26."
+},
+{
+"id": "q29",
+"subkategori": "aritmatika",
+"soal": "Berapakah 15% dari 400?",
+"pilihan": [
+"45",
+"50",
+"55",
+"60"
+],
+"jawaban": 3,
+"pembahasan": "15/100 x 400 = 60."
+},
+{
+"id": "q30",
+"subkategori": "wawasan_kebangsaan",
+"soal": "UUD 1945 disahkan sebagai undang-undang dasar negara oleh PPKI pada tanggal ...",
+"pilihan": [
+"17 Agustus 1945",
+"18 Agustus 1945",
+"19 Agustus 1945",
+"20 Agustus 1945"
+],
+"jawaban": 1,
+"pembahasan": "PPKI mengesahkan UUD 1945 pada tanggal 18 Agustus 1945."
+},
+{
+"id": "q31",
+"subkategori": "silogisme",
+"soal": "Semua atlet profesional memiliki stamina tinggi. Sebagian orang yang memiliki stamina tinggi tidak mudah lelah. Kesimpulan yang pasti adalah ...",
+"pilihan": [
+"Semua atlet tidak mudah lelah",
+"Sebagian atlet profesional tidak mudah lelah",
+"Tidak semua atlet profesional berstamina tinggi",
+"Tidak dapat disimpulkan hubungan pasti antara atlet profesional dan tidak mudah lelah"
+],
+"jawaban": 3,
+"pembahasan": "Premis partikular pada syarat kedua tidak menjamin keterkaitan langsung dengan atlet profesional."
+},
+{
+"id": "q32",
+"subkategori": "analogi",
+"soal": "Kepala : Topi = Kaki : ...",
+"pilihan": [
+"Kaos",
+"Celana",
+"Sepatu",
+"Lantai"
+],
+"jawaban": 2,
+"pembahasan": "Topi dikenakan di kepala, sepatu dikenakan di kaki."
+},
+{
+"id": "q33",
+"subkategori": "sinonim",
+"soal": "DESENTRALISASI = ...",
+"pilihan": [
+"Pemusatan",
+"Otonomi",
+"Penyatuan",
+"Penggabungan"
+],
+"jawaban": 1,
+"pembahasan": "Desentralisasi berarti penyerahan wewenang pemerintahan (otonomi daerah)."
+},
+{
+"id": "q34",
+"subkategori": "antonim",
+"soal": "KONTRAKSI = ...",
+"pilihan": [
+"Penyusutan",
+"Pengurangan",
+"Ekspansi",
+"Penurunan"
+],
+"jawaban": 2,
+"pembahasan": "Kontraksi berarti penguncupan/penyusutan, lawan katanya adalah ekspansi (perluasan)."
+},
+{
+"id": "q35",
+"subkategori": "deret_angka",
+"soal": "81, 27, 9, 3, ...",
+"pilihan": [
+"0",
+"1",
+"1/3",
+"2"
+],
+"jawaban": 1,
+"pembahasan": "Pola deret dibagi 3: 3 / 3 = 1."
+},
+{
+"id": "q36",
+"subkategori": "aritmatika",
+"soal": "Jika x = 3 dan y = 4, berapakah nilai dari x^2 + y^2?",
+"pilihan": [
+"14",
+"25",
+"49",
+"12"
+],
+"jawaban": 1,
+"pembahasan": "3^2 + 4^2 = 9 + 16 = 25."
+},
+{
+"id": "q37",
+"subkategori": "implikasi",
+"soal": "Jika seseorang rajin belajar, maka ia akan lulus ujian. Budi lulus ujian. Kesimpulan yang tepat adalah ...",
+"pilihan": [
+"Budi pasti rajin belajar",
+"Budi tidak rajin belajar",
+"Budi mungkin rajin belajar",
+"Budi tidak ikut ujian"
+],
+"jawaban": 2,
+"pembahasan": "Membenarkan konsekuen tidak otomatis memastikan anteseden (sesat pikir afirmasi akibat), jadi Budi mungkin rajin belajar."
+},
+{
+"id": "q38",
+"subkategori": "urutan",
+"soal": "Tim A berhasil mengalahkan Tim B. Tim C kalah dari Tim B. Urutan peringkat dari yang terkuat adalah ...",
+"pilihan": [
+"A - B - C",
+"C - B - A",
+"B - A - C",
+"A - C - B"
+],
+"jawaban": 0,
+"pembahasan": "A > B dan B > C, maka peringkatnya adalah A - B - C."
+},
+{
+"id": "q39",
+"subkategori": "hari",
+"soal": "Jika tanggal 1 bulan ini jatuh pada hari Senin, maka tanggal 25 pada bulan yang sama jatuh pada hari ...",
+"pilihan": [
+"Selasa",
+"Rabu",
+"Kamis",
+"Jumat"
+],
+"jawaban": 2,
+"pembahasan": "Selisih hari = 25 - 1 = 24. 24 mod 7 = 3. Senin + 3 hari = Kamis."
+},
+{
+"id": "q40",
+"subkategori": "silogisme",
+"soal": "Semua ikan bernapas dengan insang. Paus bernapas dengan paru-paru. Kesimpulan yang benar adalah ...",
+"pilihan": [
+"Paus adalah jenis ikan",
+"Paus bukan ikan",
+"Sebagian ikan bernapas dengan paru-paru",
+"Ikan dan paus bernapas dengan organ yang sama"
+],
+"jawaban": 1,
+"pembahasan": "Karena paus tidak bernapas dengan insang, maka paus bukan termasuk ikan."
+},
+{
+"id": "q41",
+"subkategori": "analogi",
+"soal": "Dokter : Resep = Koki : ...",
+"pilihan": [
+"Dapur",
+"Makanan",
+"Menu",
+"Pisau"
+],
+"jawaban": 2,
+"pembahasan": "Dokter acuan kerjanya menggunakan resep obat, koki menggunakan susunan menu/resep masakan."
+},
+{
+"id": "q42",
+"subkategori": "sinonim",
+"soal": "VIRTUAL = ...",
+"pilihan": [
+"Nyata",
+"Maya",
+"Lama",
+"Asli"
+],
+"jawaban": 1,
+"pembahasan": "Virtual berarti tersimulasi secara digital atau maya."
+},
+{
+"id": "q43",
+"subkategori": "antonim",
+"soal": "ABSTRAK = ...",
+"pilihan": [
+"Kabur",
+"Konkret",
+"Unik",
+"Kompleks"
+],
+"jawaban": 1,
+"pembahasan": "Abstrak berarti tidak berwujud nyata, lawan katanya adalah konkret."
+},
+{
+"id": "q44",
+"subkategori": "deret_angka",
+"soal": "2, 3, 5, 7, 11, 13, ...",
+"pilihan": [
+"15",
+"16",
+"17",
+"19"
+],
+"jawaban": 2,
+"pembahasan": "Deret bilangan prima berturut-turut. Bilangan prima setelah 13 adalah 17."
+},
+{
+"id": "q45",
+"subkategori": "aritmatika",
+"soal": "Berapakah nilai dari 0,75 x 80?",
+"pilihan": [
+"50",
+"60",
+"70",
+"80"
+],
+"jawaban": 1,
+"pembahasan": "0,75 = 3/4. Maka 3/4 x 80 = 60."
+},
+{
+"id": "q46",
+"subkategori": "wawasan_kebangsaan",
+"soal": "Sila ketiga Pancasila dilambangkan oleh gambar ...",
+"pilihan": [
+"Bintang",
+"Rantai",
+"Pohon Beringin",
+"Kepala Banteng"
+],
+"jawaban": 2,
+"pembahasan": "Sila ke-3 (Persatuan Indonesia) dilambangkan oleh Pohon Beringin."
+},
+{
+"id": "q47",
+"subkategori": "analogi",
+"soal": "Komputer : Listrik = Mobil : ...",
+"pilihan": [
+"Roda",
+"Mesin",
+"Bensin",
+"Jalan"
+],
+"jawaban": 2,
+"pembahasan": "Komputer membutuhkan tenaga listrik agar berfungsi, mobil membutuhkan bensin/bahan bakar."
+},
+{
+"id": "q48",
+"subkategori": "urutan",
+"soal": "Meja A lebih berat daripada Meja B. Meja B lebih berat daripada Meja C. Meja D memiliki berat yang sama dengan Meja A. Meja manakah yang paling ringan?",
+"pilihan": [
+"Meja A",
+"Meja B",
+"Meja C",
+"Meja D"
+],
+"jawaban": 2,
+"pembahasan": "Urutan dari terberat: (Meja A = Meja D) > Meja B > Meja C. Meja termurah/paling ringan adalah Meja C."
+},
+{
+"id": "q49",
+"subkategori": "silogisme",
+"soal": "Semua anggota TNI wajib lulus tes fisik. Dodi telah lulus tes fisik. Kesimpulan yang tepat adalah ...",
+"pilihan": [
+"Dodi adalah pasti anggota TNI",
+"Dodi belum tentu anggota TNI",
+"Dodi tidak akan menjadi anggota TNI",
+"Semua yang lulus tes fisik otomatis anggota TNI"
+],
+"jawaban": 1,
+"pembahasan": "Lulus tes fisik adalah syarat bagi anggota TNI, namun bukan berarti semua yang lulus tes fisik sudah pasti anggota TNI."
+},
+{
+"id": "q50",
+"subkategori": "deret_angka",
+"soal": "100, 90, 81, 73, ...",
+"pilihan": [
+"64",
+"65",
+"66",
+"67"
+],
+"jawaban": 2,
+"pembahasan": "Pola pengurangan berturut-turut dikurangi 1 (-10, -9, -8, -7). 73 - 7 = 66."
+}
 ]

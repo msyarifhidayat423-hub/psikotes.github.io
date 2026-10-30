@@ -3,60 +3,101 @@ import { simpanHasil } from "./db.js";
 import { pasangNavbar, tampilPesan, loading, formatWaktu } from "./ui.js";
 
 const PANJANG_KOLOM = 60;
-let user, kolom = [], kolomKe = 0, pos = 0, sisaKolom = 0, timer = null,
-    jumlahKolom = 0, detikPerKolom = 0;
+
+// State runtime
+let user, kolom = [], kolomKe = 0, pos = 0, sisaKolom = 0, timer = null;
 let statKolom = [], mulaiMs = 0, jalan = false, sudahSelesai = false;
 
-// State rentang angka
-let angkaMin = 0, angkaMax = 9;
+// Konfigurasi sesi — DIBEKUKAN saat mulai() agar tidak berubah di tengah tes
+let config = null; // { jumlahKolom, detikPerKolom, angkaMin, angkaMax }
 
 const $ = id => document.getElementById(id);
 
-function angkaAcak() {
-  return Math.floor(Math.random() * (angkaMax - angkaMin + 1)) + angkaMin;
+/**
+ * Angka acak inklusif dalam [min, max].
+ * Guard: jika min/max bukan number valid, fallback ke 0..9.
+ */
+function angkaAcak(min, max) {
+  if (!Number.isFinite(min) || !Number.isFinite(max)) { min = 0; max = 9; }
+  if (min > max) { const t = min; min = max; max = t; } // safety swap
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function buatKolom() {
-  return Array.from({ length: PANJANG_KOLOM }, () => angkaAcak());
+function buatKolom(min, max) {
+  return Array.from({ length: PANJANG_KOLOM }, () => angkaAcak(min, max));
 }
 
-function validasiRentang() {
-  const min = parseInt($("angkaMin").value, 10);
-  const max = parseInt($("angkaMax").value, 10);
-  if (Number.isNaN(min) || Number.isNaN(max)) return "Rentang angka harus berupa angka.";
-  if (min < 0 || min > 9 || max < 0 || max > 9) return "Rentang angka harus di antara 0 dan 9.";
-  if (min > max) return "Angka minimum tidak boleh lebih besar dari angka maksimum.";
-  return null;
+/**
+ * Baca & validasi rentang dari input.
+ * Mengembalikan { min, max } atau null jika tidak valid.
+ */
+function bacaRentang() {
+  const rawMin = $("angkaMin").value.trim();
+  const rawMax = $("angkaMax").value.trim();
+  const min = parseInt(rawMin, 10);
+  const max = parseInt(rawMax, 10);
+
+  if (rawMin === "" || rawMax === "" || Number.isNaN(min) || Number.isNaN(max)) {
+    return { error: "Rentang angka tidak boleh kosong dan harus berupa angka." };
+  }
+  if (min < 0 || min > 9 || max < 0 || max > 9) {
+    return { error: "Rentang angka harus di antara 0 dan 9." };
+  }
+  if (min > max) {
+    return { error: "Angka minimum tidak boleh lebih besar dari angka maksimum." };
+  }
+  return { min, max };
 }
 
 function mulai() {
-  if (sudahSelesai) return;
-  const err = validasiRentang();
-  if (err) { tampilPesan($("pesan"), err, "error"); return; }
+  // Reset flag agar bisa mulai sesi baru setelah sesi sebelumnya selesai
+  if (jalan) return; // sudah ada sesi berjalan, cegah double-click
 
-  angkaMin = parseInt($("angkaMin").value, 10);
-  angkaMax = parseInt($("angkaMax").value, 10);
-  jumlahKolom = parseInt($("jumlahKolom").value, 10);
-  detikPerKolom = parseInt($("detikKolom").value, 10);
+  const rentang = bacaRentang();
+  if (rentang.error) {
+    tampilPesan($("pesan"), rentang.error, "error");
+    return;
+  }
 
-  kolomKe = 0; statKolom = []; mulaiMs = Date.now(); jalan = true;
+  const jumlahKolom = parseInt($("jumlahKolom").value, 10);
+  const detikPerKolom = parseInt($("detikKolom").value, 10);
+
+  // BEKUKAN konfigurasi — nilai ini TIDAK akan berubah selama sesi berjalan,
+  // meskipun user mengubah input di tengah tes (input sudah disembunyikan).
+  config = Object.freeze({
+    jumlahKolom,
+    detikPerKolom,
+    angkaMin: rentang.min,
+    angkaMax: rentang.max
+  });
+
+  // Reset state
+  kolomKe = 0;
+  statKolom = [];
+  mulaiMs = Date.now();
+  jalan = true;
+  sudahSelesai = false;
+
   $("pesan").classList.add("hidden");
   $("setup").classList.add("hidden");
   $("tes").classList.remove("hidden");
+
   mulaiKolom();
 }
 
 function mulaiKolom() {
-  kolom = buatKolom();
+  // Gunakan config yang sudah dibekukan, BUKAN variabel global yang bisa berubah
+  kolom = buatKolom(config.angkaMin, config.angkaMax);
   pos = 0;
-  sisaKolom = detikPerKolom;
-  // Simpan dijawab, benar, dan salah per kolom
+  sisaKolom = config.detikPerKolom;
+
   statKolom[kolomKe] = { dijawab: 0, benar: 0, salah: 0 };
   gambar();
 
   clearInterval(timer);
   $("timer").textContent = formatWaktu(sisaKolom);
   $("timer").classList.remove("habis");
+
   timer = setInterval(() => {
     sisaKolom--;
     $("timer").textContent = formatWaktu(Math.max(sisaKolom, 0));
@@ -69,12 +110,12 @@ function lanjutKolom() {
   clearInterval(timer);
   timer = null;
   kolomKe++;
-  if (kolomKe >= jumlahKolom) { selesai(); return; }
-  mulaiKolom();
+  if (kolomKe >= config.jumlahKolom) { selesai(); return; }
+  mulaiKolom(); // akan memakai config yang sama
 }
 
 function gambar() {
-  $("infoKolom").textContent = `Kolom ${kolomKe + 1} dari ${jumlahKolom}`;
+  $("infoKolom").textContent = `Kolom ${kolomKe + 1} dari ${config.jumlahKolom}`;
   const awal = Math.max(0, Math.min(pos - 1, PANJANG_KOLOM - 7));
   let html = "";
   for (let i = awal; i < Math.min(awal + 7, PANJANG_KOLOM); i++) {
@@ -85,7 +126,7 @@ function gambar() {
 }
 
 function jawab(angka) {
-  if (!jalan || sudahSelesai) return;
+  if (!jalan || sudahSelesai || !config) return;
   if (pos >= PANJANG_KOLOM - 1) return;
 
   const benar = (kolom[pos] + kolom[pos + 1]) % 10;
@@ -93,14 +134,14 @@ function jawab(angka) {
   st.dijawab++;
   if (angka === benar) st.benar++;
   else st.salah++;
-  pos++;
 
+  pos++;
   if (pos >= PANJANG_KOLOM - 1) { lanjutKolom(); return; }
   gambar();
 }
 
 async function selesai() {
-  if (sudahSelesai) return;
+  if (sudahSelesai || !config) return;
   sudahSelesai = true;
   jalan = false;
   clearInterval(timer);
@@ -109,7 +150,6 @@ async function selesai() {
   const benar = statKolom.reduce((a, k) => a + k.benar, 0);
   const salah = dijawab - benar;
 
-  // Data per kolom untuk chart di hasil.html
   const kolomDijawab = statKolom.map(k => k.dijawab);
   const kolomBenar   = statKolom.map(k => k.benar);
   const kolomSalah   = statKolom.map(k => k.salah);
@@ -118,17 +158,18 @@ async function selesai() {
     kategori: "kraepelin",
     total: dijawab, benar, salah, kosong: 0,
     skor: dijawab ? Math.round(benar / dijawab * 100) : 0,
-    kolom: kolomDijawab,        // kompatibilitas data lama
+    kolom: kolomDijawab,
     kolomBenar,
     kolomSalah,
-    jumlahKolom,
+    jumlahKolom: config.jumlahKolom,
     durasiDetik: Math.round((Date.now() - mulaiMs) / 1000),
-    rentangAngka: { min: angkaMin, max: angkaMax }
+    rentangAngka: { min: config.angkaMin, max: config.angkaMax }
   };
 
   loading(true, "Menyimpan hasil...");
   let tersimpan = true;
-  try { await simpanHasil(user, hasil); } catch (e) { tersimpan = false; console.error(e); }
+  try { await simpanHasil(user, hasil); }
+  catch (e) { tersimpan = false; console.error(e); }
   loading(false);
 
   sessionStorage.setItem("hasilTerakhir", JSON.stringify({
@@ -141,16 +182,16 @@ async function init() {
   user = await wajibLogin();
   pasangNavbar("kraepelin.html", user);
 
+  // Preview rentang real-time
   const updateInfo = () => {
-    const min = parseInt($("angkaMin").value, 10);
-    const max = parseInt($("angkaMax").value, 10);
     const el = $("infoRentang");
-    if (Number.isNaN(min) || Number.isNaN(max) || min > max || min < 0 || max > 9) {
-      el.textContent = "Rentang tidak valid. Pastikan 0 ≤ min ≤ max ≤ 9.";
+    const rentang = bacaRentang();
+    if (rentang.error) {
+      el.textContent = rentang.error;
       el.style.color = "#dc2626";
     } else {
       const list = [];
-      for (let i = min; i <= max; i++) list.push(i);
+      for (let i = rentang.min; i <= rentang.max; i++) list.push(i);
       el.textContent = `Angka yang akan muncul: ${list.join(", ")}`;
       el.style.color = "";
     }
@@ -160,13 +201,16 @@ async function init() {
   updateInfo();
 
   $("btnMulai").addEventListener("click", mulai);
+
   document.querySelectorAll("#pad button").forEach(b =>
     b.addEventListener("click", () => jawab(parseInt(b.dataset.n, 10))));
+
   document.addEventListener("keydown", e => {
     if (/^[0-9]$/.test(e.key) && !$("tes").classList.contains("hidden")) {
       jawab(parseInt(e.key, 10));
     }
   });
+
   $("btnBerhenti").addEventListener("click", () => {
     if (confirm("Hentikan tes dan simpan hasil sementara?")) selesai();
   });

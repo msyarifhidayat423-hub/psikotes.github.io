@@ -8,22 +8,42 @@
 </head>
 <body>
 <main class="container">
+  <div id="pesan" class="pesan hidden"></div>
+
   <div id="setup" class="card">
     <h2>Tes Kraepelin / Pauli</h2>
     <p>Jumlahkan dua angka yang disorot (kuning) lalu tekan <b>angka satuan</b> dari hasilnya.
        Contoh: 7 + 8 = 15, tekan <b>5</b>. Setelah menjawab, sorotan turun satu angka.</p>
+
     <label for="jumlahKolom">Jumlah kolom</label>
     <select id="jumlahKolom">
       <option value="3">3 kolom</option>
       <option value="5" selected>5 kolom</option>
       <option value="10">10 kolom</option>
     </select>
+
     <label for="detikKolom">Waktu per kolom</label>
     <select id="detikKolom">
       <option value="15">15 detik</option>
       <option value="30" selected>30 detik</option>
       <option value="60">60 detik</option>
     </select>
+
+    <!-- ====== FITUR BARU: RENTANG ANGKA ====== -->
+    <label>Rentang angka yang muncul</label>
+    <div class="baris" style="margin-top:0;align-items:center;gap:.5rem">
+      <input id="angkaMin" type="number" min="0" max="9" value="0"
+             style="width:80px" aria-label="Angka minimum">
+      <span>s.d.</span>
+      <input id="angkaMax" type="number" min="0" max="9" value="9"
+             style="width:80px" aria-label="Angka maksimum">
+    </div>
+    <p class="kecil" id="infoRentang" style="margin-top:.4rem">
+      Contoh: isi 5 dan 9 → angka yang muncul hanya 5, 6, 7, 8, 9.
+      Biarkan 0 dan 9 untuk semua digit.
+    </p>
+    <!-- ======================================== -->
+
     <div class="baris"><button id="btnMulai" class="btn" type="button">Mulai</button></div>
   </div>
 

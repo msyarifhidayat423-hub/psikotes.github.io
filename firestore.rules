@@ -7,13 +7,26 @@ service cloud.firestore {
                   && request.auth.uid == resource.data.uid;
 
       // User hanya bisa membuat dokumen atas namanya sendiri, dengan skor valid
-      allow create: if request.auth != null
-                    && request.auth.uid == request.resource.data.uid
-                    && request.resource.data.skor is number
-                    && request.resource.data.skor >= 0
-                    && request.resource.data.skor <= 100
-                    && request.resource.data.kategori is string;
-
+     allow create: if request.auth != null
+              && request.auth.uid == request.resource.data.uid
+              && request.resource.data.skor is number
+              && request.resource.data.skor >= 0
+              && request.resource.data.skor <= 100
+              && request.resource.data.kategori is string
+              && (
+                   !('kolomBenar' in request.resource.data)
+                   || request.resource.data.kolomBenar is list
+                 )
+              && (
+                   !('rentangAngka' in request.resource.data)
+                   || (
+                        request.resource.data.rentangAngka.min is number
+                        && request.resource.data.rentangAngka.max is number
+                        && request.resource.data.rentangAngka.min >= 0
+                        && request.resource.data.rentangAngka.max <= 9
+                        && request.resource.data.rentangAngka.min <= request.resource.data.rentangAngka.max
+                      )
+                 );
       // Tidak ada update/delete dari client
       allow update, delete: if false;
     }

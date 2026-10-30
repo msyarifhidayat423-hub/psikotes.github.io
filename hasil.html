@@ -1,83 +1,140 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hasil - Latihan Sikotes</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hasil - Latihan Sikotes</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
-
 <body>
-  <main class="container">
-    <div id="pesan" class="pesan hidden"></div>
-    <div id="isi" class="hidden">
-      <div class="card">
-        <h2 id="judul">Hasil</h2>
-        <div class="skor-besar" id="skor">0</div>
-        <p class="kecil" style="text-align:center" id="durasi"></p>
-        <div class="grid">
-          <div class="stat">
-            <div class="angka" id="benar">0</div>
-            <div class="label">Benar</div>
-          </div>
-          <div class="stat">
-            <div class="angka" id="salah">0</div>
-            <div class="label">Salah</div>
-          </div>
-          <div class="stat">
-            <div class="angka" id="kosong">0</div>
-            <div class="label">Kosong</div>
-          </div>
-        </div>
-        <div class="baris">
-          <a class="btn" href="latihan.html">Latihan Lagi</a>
-          <a class="btn sekunder" href="statistik.html">Lihat Statistik</a>
-        </div>
+<main class="container">
+  <div id="pesan" class="pesan hidden"></div>
+  <div id="isi" class="hidden">
+    <div class="card">
+      <h2 id="judul">Hasil</h2>
+      <div class="skor-besar" id="skor">0</div>
+      <p class="kecil" style="text-align:center" id="durasi"></p>
+      <div class="grid">
+        <div class="stat"><div class="angka" id="benar">0</div><div class="label">Benar</div></div>
+        <div class="stat"><div class="angka" id="salah">0</div><div class="label">Salah</div></div>
+        <div class="stat"><div class="angka" id="kosong">0</div><div class="label">Kosong</div></div>
       </div>
-      <div class="card" id="boxReview">
-        <h3>Pembahasan</h3>
-        <div id="review"></div>
+      <div class="baris">
+        <a class="btn" href="latihan.html">Latihan Lagi</a>
+        <a class="btn sekunder" href="kraepelin.html">Kraepelin</a>
+        <a class="btn sekunder" href="statistik.html">Lihat Statistik</a>
       </div>
     </div>
-  </main>
-  <script type="module">
-    import { wajibLogin } from "./js/auth.js";
-    import { pasangNavbar, tampilPesan, esc, formatWaktu, NAMA_KATEGORI } from "./js/ui.js";
-    const $ = id => document.getElementById(id);
-    const user = await wajibLogin();
-    pasangNavbar("", user);
-    const raw = sessionStorage.getItem("hasilTerakhir");
-    if (!raw) {
-      tampilPesan($("pesan"), "Belum ada hasil. Kerjakan satu sesi latihan dulu.", "info");
+
+    <!-- Review untuk kategori non-Kraepelin -->
+    <div class="card" id="boxReview"><h3>Pembahasan</h3><div id="review"></div></div>
+
+    <!-- Chart per kolom untuk Kraepelin -->
+    <div class="card" id="boxChartKraepelin">
+      <h3>Grafik Per Kolom</h3>
+      <p class="kecil" id="infoRentangKraepelin"></p>
+      <div class="chart-wrap"><canvas id="chartKolom"></canvas></div>
+    </div>
+  </div>
+</main>
+
+<script type="module">
+  import { wajibLogin } from "./js/auth.js";
+  import { pasangNavbar, tampilPesan, esc, formatWaktu, NAMA_KATEGORI } from "./js/ui.js";
+
+  const $ = id => document.getElementById(id);
+  const user = await wajibLogin();
+  pasangNavbar("", user);
+
+  const raw = sessionStorage.getItem("hasilTerakhir");
+  if (!raw) {
+    tampilPesan($("pesan"), "Belum ada hasil. Kerjakan satu sesi latihan dulu.", "info");
+  } else {
+    const h = JSON.parse(raw);
+    $("isi").classList.remove("hidden");
+    $("judul").textContent = "Hasil " + (NAMA_KATEGORI[h.kategori] || h.kategori);
+    $("skor").textContent = h.skor;
+    $("durasi").textContent = "Waktu: " + formatWaktu(h.durasiDetik);
+    $("benar").textContent = h.benar;
+    $("salah").textContent = h.salah;
+    $("kosong").textContent = h.kosong;
+
+    if (!h.tersimpan) {
+      tampilPesan($("pesan"), "Hasil gagal disimpan ke database. Periksa koneksi dan aturan Firestore.", "error");
+    }
+
+    const isKraepelin = h.kategori === "kraepelin";
+
+    // ====== Tampilkan review hanya untuk non-Kraepelin ======
+    if (isKraepelin || !h.review || !h.review.length) {
+      $("boxReview").classList.add("hidden");
     } else {
-      const h = JSON.parse(raw);
-      $("isi").classList.remove("hidden");
-      $("judul").textContent = "Hasil " + (NAMA_KATEGORI[h.kategori] || h.kategori);
-      $("skor").textContent = h.skor;
-      $("durasi").textContent = "Waktu: " + formatWaktu(h.durasiDetik);
-      $("benar").textContent = h.benar; $("salah").textContent = h.salah; $("kosong").textContent = h.kosong;
-      if (!h.tersimpan) tampilPesan($("pesan"), "Hasil gagal disimpan ke database. Periksa koneksi dan aturan Firestore.", "error");
-      if (!h.review || !h.review.length) { $("boxReview").classList.add("hidden"); }
-      else {
-        $("review").innerHTML = h.review.map((r, i) => {
-          const ok = r.jawabanUser === r.jawabanBenar;
-          const huruf = n => {
-            if (n === null || n === undefined) return "(kosong)";
-            if (!r.pilihan || !r.pilihan[n]) return "-";
-            return String.fromCharCode(65 + n) + ". " + esc(r.pilihan[n]);
-          };
-          return `<div class="review ${ok ? "benar" : "salah"}">
+      $("review").innerHTML = h.review.map((r, i) => {
+        const ok = r.jawabanUser === r.jawabanBenar;
+        const huruf = n => {
+          if (n === null || n === undefined) return "(kosong)";
+          if (!r.pilihan || !r.pilihan[n]) return "-";
+          return String.fromCharCode(65 + n) + ". " + esc(r.pilihan[n]);
+        };
+        return `<div class="review ${ok ? "benar" : "salah"}">
           <b>${i + 1}. ${esc(r.soal)}</b>
           ${r.gambar ? `<img src="${esc(r.gambar)}" class="soal-gambar" alt="">` : ""}
           <div>Jawaban kamu: ${huruf(r.jawabanUser)}</div>
           ${ok ? "" : `<div>Jawaban benar: ${huruf(r.jawabanBenar)}</div>`}
           ${r.pembahasan ? `<div class="kecil">${esc(r.pembahasan)}</div>` : ""}
         </div>`;
-        }).join("");
-      }
+      }).join("");
     }
-  </script>
-</body>
 
+    // ====== Chart per kolom untuk Kraepelin ======
+    if (isKraepelin && Array.isArray(h.kolomBenar) && h.kolomBenar.length) {
+      $("boxChartKraepelin").classList.remove("hidden");
+
+      if (h.rentangAngka) {
+        $("infoRentangKraepelin").textContent =
+          `Rentang angka: ${h.rentangAngka.min}–${h.rentangAngka.max} · ` +
+          `${h.jumlahKolom || h.kolomBenar.length} kolom · ` +
+          `Rata-rata benar/kolom: ${Math.round(h.benar / h.kolomBenar.length)}`;
+      }
+
+      const labels = h.kolomBenar.map((_, i) => `Kolom ${i + 1}`);
+      const dataDijawab = h.kolom || h.kolomBenar.map((b, i) => b + (h.kolomSalah?.[i] || 0));
+      const dataBenar = h.kolomBenar;
+      const dataSalah = h.kolomSalah || dataDijawab.map((d, i) => d - dataBenar[i]);
+
+      new Chart($("chartKolom"), {
+        type: "bar",
+        data: {
+          labels,
+          datasets: [
+            { label: "Benar",  data: dataBenar,   backgroundColor: "#16a34a" },
+            { label: "Salah",  data: dataSalah,   backgroundColor: "#dc2626" },
+            { label: "Total dijawab", data: dataDijawab, backgroundColor: "#93c5fd", type: "line", borderColor: "#1d4ed8", borderWidth: 2, tension: .3, fill: false, pointRadius: 4 }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: "bottom" },
+            tooltip: { mode: "index", intersect: false }
+          },
+          scales: {
+            x: { title: { display: true, text: "Kolom" } },
+            y: { beginAtZero: true, title: { display: true, text: "Jumlah jawaban" } }
+          }
+        }
+      });
+    } else if (isKraepelin) {
+      // Data lama (sebelum revisi) tidak punya kolomBenar — tampilkan pesan
+      $("boxChartKraepelin").classList.remove("hidden");
+      $("infoRentangKraepelin").textContent =
+        "Data ini dibuat sebelum fitur grafik per kolom ditambahkan, jadi grafik tidak tersedia. Coba lakukan tes Kraepelin baru.";
+    } else {
+      $("boxChartKraepelin").classList.add("hidden");
+    }
+  }
+</script>
+</body>
 </html>
